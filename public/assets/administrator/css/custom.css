@@ -1,0 +1,4 @@
+.off-canvas-sidebar .nav,
+.sidebar .nav {
+    overflow-x: hidden !important;
+}
