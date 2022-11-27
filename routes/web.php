@@ -25,3 +25,15 @@ Route::get('/', function () {
 Route::prefix('/administrator')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('landing.about.index');
+});
+
+Route::get('/contact', function () {
+    return view('landing.contact.index');
+});

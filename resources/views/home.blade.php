@@ -23,12 +23,11 @@
 	<link rel="stylesheet" href="/template/property/untree.co-property/fonts/icomoon/style.css">
 	<link rel="stylesheet" href="/template/property/untree.co-property/fonts/flaticon/font/flaticon.css">
 
-
 	<link rel="stylesheet" href="/template/property/untree.co-property/css/tiny-slider.css">
 	<link rel="stylesheet" href="/template/property/untree.co-property/css/aos.css">
 	<link rel="stylesheet" href="/template/property/untree.co-property/css/style.css">
 
-	<title>Dashboard</title>
+	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 </head>
 <body>
 
@@ -44,6 +43,8 @@
 	@include('layout.landing_page.header')
 
 	<div class="hero">
+
+
 		<div class="hero-slide">
 			<div class="img overlay" style="background-image: url('/template/property/untree.co-property/images/hero_bg_3.jpg')"></div>
 			<div class="img overlay" style="background-image: url('/template/property/untree.co-property/images/hero_bg_2.jpg')"></div>
@@ -53,9 +54,9 @@
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-lg-9 text-center">
-					<h1 class="heading" data-aos="fade-up">Cara termudah untuk menemukan rumah impian Anda</h1>
+					<h1 class="heading" data-aos="fade-up">Easiest way to find your dream home</h1>
 					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-						<input type="text" class="form-control px-4" placeholder="Pencarian...">
+						<input type="text" class="form-control px-4" placeholder="Search....">
 						<button type="submit" class="btn btn-primary">Search</button>
 					</form>
 				</div>
@@ -64,9 +65,7 @@
 	</div>
 
 
-	<div class="section">
-		@include('layout.landing_page.projects')
-	</div>
+	@include('layout.landing_page.project')
 
 	<section class="features-1">
 		<div class="container">
@@ -106,6 +105,7 @@
 			</div>
 		</div>
 	</section>
+
 
 	<div class="section section-4 bg-light">
 		<div class="container">
@@ -153,16 +153,42 @@
 					</div>
 				</div>
 			</div>
+			<div class="row section-counter mt-5">
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+					<div class="counter-wrap mb-5 mb-lg-0">
+						<span class="number"><span class="countup text-primary">3298</span></span>
+						<span class="caption text-black-50"># of Buy Properties</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+					<div class="counter-wrap mb-5 mb-lg-0">
+						<span class="number"><span class="countup text-primary">2181</span></span>
+						<span class="caption text-black-50"># of Sell Properties</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+					<div class="counter-wrap mb-5 mb-lg-0">
+						<span class="number"><span class="countup text-primary">9316</span></span>
+						<span class="caption text-black-50"># of All Properties</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+					<div class="counter-wrap mb-5 mb-lg-0">
+						<span class="number"><span class="countup text-primary">7191</span></span>
+						<span class="caption text-black-50"># of Agents</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div class="section">
 		<div class="row justify-content-center footer-cta" data-aos="fade-up">
 			<div class="col-lg-7 mx-auto text-center">
-				<h2 class="mb-4 ">Silahkan Hubungi Kami</h2>
-				<p><a href="#" class="btn btn-primary text-white py-3 px-4">Contact Us</a></p>
-			</div>
-		</div>
+				<h2 class="mb-4 ">Please contact us, if you need assistance</h2>
+				<p><a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">About us</a></p>
+			</div> <!-- /.col-lg-7 -->
+		</div> <!-- /.row -->
 	</div>
 
 	<div class="section section-5 bg-light">
@@ -173,7 +199,7 @@
 					<p class="text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores.</p>
 				</div>
 			</div>
-			<div class="row d-flex justify-content-center">
+			<div class="row justify-content-center">
 				<div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
 					<div class="h-100 person">
 
@@ -181,7 +207,7 @@
 						class="img-fluid">
 
 						<div class="person-contents">
-							<h2 class="mb-0"><a href="#">Dedy Sisnanto ST</a></h2>
+							<h2 class="mb-0"><a href="#">MAS DEDDY</a></h2>
 							<span class="meta d-block mb-3">Founder</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
 
@@ -197,12 +223,12 @@
 				<div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
 					<div class="h-100 person">
 
-						<img src="/template/property/untree.co-property/images/person_3-min.jpg" alt="Image"
+						<img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image"
 						class="img-fluid">
 
 						<div class="person-contents">
-							<h2 class="mb-0"><a href="#">Thoni Ardhi, ST</a></h2>
-							<span class="meta d-block mb-3">Co-Founder</span>
+							<h2 class="mb-0"><a href="#">MAS THONI</a></h2>
+							<span class="meta d-block mb-3">Co-founder</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
 
 							<ul class="social list-unstyled list-inline dark-hover">
@@ -214,12 +240,31 @@
 						</div>
 					</div>
 				</div>
+				{{-- <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
+					<div class="h-100 person">
+
+						<img src="/template/property/untree.co-property/images/person_3-min.jpg" alt="Image"
+						class="img-fluid">
+
+						<div class="person-contents">
+							<h2 class="mb-0"><a href="#">Alicia Huston</a></h2>
+							<span class="meta d-block mb-3">Real Estate Agent</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
+
+							<ul class="social list-unstyled list-inline dark-hover">
+								<li class="list-inline-item"><a href="#"><span class="icon-twitter"></span></a></li>
+								<li class="list-inline-item"><a href="#"><span class="icon-facebook"></span></a></li>
+								<li class="list-inline-item"><a href="#"><span class="icon-linkedin"></span></a></li>
+								<li class="list-inline-item"><a href="#"><span class="icon-instagram"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div> --}}
 			</div>
 		</div>
 	</div>
 
-    @include('layout.landing_page.footer')
-
+	@include('layout.landing_page.footer')
 
     <!-- Preloader -->
     <div id="overlayer"></div>

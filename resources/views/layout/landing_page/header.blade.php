@@ -9,22 +9,19 @@
                     <li class="has-children">
                         <a href="properties.html">Projects</a>
                         <ul class="dropdown">
-                            <li><a href="#">All Projects</a></li>
-                            <li><a href="#">Buy Projects</a></li>
-                            <li><a href="#">Sell Projects</a></li>
-                            
-                            {{-- <li class="has-children">
-                                <a href="#">Dropdown</a>
+                            <li><a href="#">INTERIORS</a></li>
+                            <li class="has-children">
+                                <a href="#">ARSITECTURES</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Sub Menu One</a></li>
-                                    <li><a href="#">Sub Menu Two</a></li>
-                                    <li><a href="#">Sub Menu Three</a></li>
+                                    <li><a href="#">COMMERCIAL</a></li>
+                                    <li><a href="#">RESIDENTIAL</a></li>
+                                    <li><a href="#">RETAIL</a></li>
                                 </ul>
-                            </li> --}}
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
                 </ul>
 
                 <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
