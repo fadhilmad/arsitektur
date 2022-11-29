@@ -2,10 +2,10 @@
     <div class="container">
         <div class="menu-bg-wrap">
             <div class="site-navigation">
-                <a href="index.html" class="logo m-0 float-start">DSATELI3R</a>
+                <a href="home" class="logo m-0 float-start">DSATELI3R</a>
 
                 <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="home">Home</a></li>
                     <li class="has-children">
                         <a href="properties.html">Projects</a>
                         <ul class="dropdown">
