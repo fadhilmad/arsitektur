@@ -9,7 +9,7 @@
                     <li class="has-children">
                         <a href="/projects">Projects</a>
                         <ul class="dropdown">
-                            <li><a href="#">INTERIORS</a></li>
+                            <li><a href="/interios">INTERIORS</a></li>
                             <li class="has-children">
                                 <a href="#">ARSITECTURES</a>
                                 <ul class="dropdown">

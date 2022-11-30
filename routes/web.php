@@ -46,3 +46,7 @@ Route::get('/detail_project', function () {
     return view('landing.projects.detail_project');
 });
 
+Route::get('/interios', function () {
+    return view('landing.interios.index');
+});
+
