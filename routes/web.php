@@ -50,3 +50,18 @@ Route::get('/interios', function () {
     return view('landing.interios.index');
 });
 
+Route::get('/arsitekture', function () {
+    return view('landing.arsitekture.index');
+});
+
+Route::get('/commercial_index', function () {
+    return view('landing.arsitekture.commercial.commercial_index');
+});
+
+Route::get('/residential_index', function () {
+    return view('landing.arsitekture.residential.residential_index');
+});
+
+Route::get('/retail_index', function () {
+    return view('landing.arsitekture.retail.retail_index');
+});

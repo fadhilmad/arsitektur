@@ -11,11 +11,11 @@
                         <ul class="dropdown">
                             <li><a href="/interios">INTERIORS</a></li>
                             <li class="has-children">
-                                <a href="#">ARSITECTURES</a>
+                                <a href="/arsitekture">ARSITECTURES</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">COMMERCIAL</a></li>
-                                    <li><a href="#">RESIDENTIAL</a></li>
-                                    <li><a href="#">RETAIL</a></li>
+                                    <li><a href="commercial_index">COMMERCIAL</a></li>
+                                    <li><a href="residential_index">RESIDENTIAL</a></li>
+                                    <li><a href="retail_index">RETAIL</a></li>
                                 </ul>
                             </li>
                         </ul>
