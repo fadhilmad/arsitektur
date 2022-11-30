@@ -7,7 +7,7 @@
                 <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
                     <li class="active"><a href="home">Home</a></li>
                     <li class="has-children">
-                        <a href="properties.html">Projects</a>
+                        <a href="/projects">Projects</a>
                         <ul class="dropdown">
                             <li><a href="#">INTERIORS</a></li>
                             <li class="has-children">

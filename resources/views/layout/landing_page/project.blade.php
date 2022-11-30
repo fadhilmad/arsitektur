@@ -9,22 +9,13 @@
             </div>
         </div>
         <div class="row">
-
             <div class="col-12">
-
-
                 <div class="property-slider-wrap">
-
-
-
                     <div class="property-slider">
-
                         <div class="property-item">
-
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
                             </a>
-
                             <div class="property-content">
                                 <div class="price mb-2"><span>$1,291,000</span></div>
                                 <div>
@@ -41,15 +32,14 @@
                                             <span class="caption">2 baths</span>
                                         </span>
                                     </div>
-
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -70,14 +60,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -98,14 +88,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_4.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -126,14 +116,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_5.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -154,14 +144,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_6.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -182,14 +172,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_7.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -210,14 +200,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_8.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -238,14 +228,14 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->
 
                         <div class="property-item">
 
-                            <a href="property-single.html" class="img">
+                            <a href="detail_project" class="img">
                                 <img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
                             </a>
 
@@ -266,7 +256,7 @@
                                         </span>
                                     </div>
 
-                                    <a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+                                    <a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
                                 </div>
                             </div>
                         </div> <!-- .item -->

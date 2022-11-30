@@ -37,3 +37,12 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('landing.contact.index');
 });
+
+Route::get('/projects', function () {
+    return view('landing.projects.index');
+});
+
+Route::get('/detail_project', function () {
+    return view('landing.projects.detail_project');
+});
+
