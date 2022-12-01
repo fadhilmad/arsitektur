@@ -40,27 +40,32 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-	@include('layout.landing_page.header')
-
-    @yield('banner')
-
-    @yield('about')
-
-	<div class="section section-4 bg-light">
-		@yield('content')
-	</div>
-
-	<div class="section">
-		@yield('contact')
-	</div>
-
-	<div class="section section-5 bg-light">
+	<nav class="site-nav">
 		<div class="container">
-			@yield('team')
+			@include('layout.landing_page.header')
 		</div>
-	</div>
+	</nav>
 
-	@include('layout.landing_page.footer')
+	@yield('banner')
+
+	@yield('project')
+
+	@yield('product')
+
+	@yield('reviews')
+
+	@yield('product_banner')
+
+	@yield('contact')
+
+	@yield('team')
+
+	<div class="site-footer">
+		<div class="container">
+			@include('layout.landing_page.footer')
+      	</div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
 
     <!-- Preloader -->
     <div id="overlayer"></div>

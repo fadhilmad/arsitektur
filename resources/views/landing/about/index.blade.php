@@ -2,6 +2,7 @@
 
 @section('banner')
 <div class="hero page-inner overlay" style="background-image: url('/template/property/untree.co-property/images/hero_bg_3.jpg');">
+
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-9 text-center mt-5">
@@ -19,7 +20,7 @@
 </div>
 @endsection
 
-@section('about')
+@section('project')
 <div class="section">
 	<div class="container">
 		<div class="row text-left mb-5">
@@ -42,7 +43,7 @@
 </div>
 @endsection
 
-@section('content')
+@section('product')
 <div class="section pt-0">
 	<div class="container">
 		<div class="row justify-content-between mb-5">
@@ -169,15 +170,6 @@
 		</div>
 	</div>
 </div>
-@endsection
-
-@section('contact')
-<div class="row justify-content-center footer-cta" data-aos="fade-up">
-	<div class="col-lg-7 mx-auto text-center">
-		<h2 class="mb-4 ">Please contact us, if you need assistance</h2>
-		<p><a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">Contact us</a></p>
-	</div> <!-- /.col-lg-7 -->
-</div> <!-- /.row -->
 @endsection
 
 @section('team')

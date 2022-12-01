@@ -20,7 +20,7 @@
 </div>
 @endsection
 
-@section('content')
+@section('product')
 <div class="section">
 	<div class="container">
 		<div class="row">
@@ -81,15 +81,6 @@
 		</div>
 	</div>
 </div> <!-- /.untree_co-section -->
-@endsection
-
-@section('contact')
-<div class="row justify-content-center footer-cta" data-aos="fade-up">
-	<div class="col-lg-7 mx-auto text-center">
-		<h2 class="mb-4 ">Please contact us, if you need assistance</h2>
-		<p><a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">Contact us</a></p>
-	</div> <!-- /.col-lg-7 -->
-</div> <!-- /.row -->
 @endsection
 
 @section('team')
