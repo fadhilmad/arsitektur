@@ -20,12 +20,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" href="/template/property/untree.co-property/fonts/icomoon/style.css">
-	<link rel="stylesheet" href="/template/property/untree.co-property/fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/fonts/icomoon/style.css')}}">
+	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/fonts/flaticon/font/flaticon.css')}}">
 
-	<link rel="stylesheet" href="/template/property/untree.co-property/css/tiny-slider.css">
-	<link rel="stylesheet" href="/template/property/untree.co-property/css/aos.css">
-	<link rel="stylesheet" href="/template/property/untree.co-property/css/style.css">
+	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/tiny-slider.css')}}">
+	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/aos.css')}}">
+	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/style.css')}}">
 
 	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 </head>
@@ -76,11 +76,11 @@
     </div>
 
 
-    <script src="/template/property/untree.co-property/js/bootstrap.bundle.min.js"></script>
-    <script src="/template/property/untree.co-property/js/tiny-slider.js"></script>
-    <script src="/template/property/untree.co-property/js/aos.js"></script>
-    <script src="/template/property/untree.co-property/js/navbar.js"></script>
-    <script src="/template/property/untree.co-property/js/counter.js"></script>
-    <script src="/template/property/untree.co-property/js/custom.js"></script>
+    <script src="{{url('/template/property/untree.co-property/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url('/template/property/untree.co-property/js/tiny-slider.js')}}"></script>
+    <script src="{{url('/template/property/untree.co-property/js/aos.js')}}"></script>
+    <script src="{{url('/template/property/untree.co-property/js/navbar.js')}}"></script>
+    <script src="{{url('/template/property/untree.co-property/js/counter.js')}}"></script>
+    <script src="{{url('/template/property/untree.co-property/js/custom.js')}}"></script>
   </body>
   </html>
