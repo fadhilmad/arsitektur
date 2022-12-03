@@ -54,6 +54,10 @@ Route::get('/arsitekture', function () {
     return view('landing.arsitekture.index');
 });
 
+Route::get('/miscellaneouse', function () {
+    return view('landing.miscellaneouse.index');
+});
+
 Route::get('/commercial_index', function () {
     return view('landing.arsitekture.commercial.commercial_index');
 });

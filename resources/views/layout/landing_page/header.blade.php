@@ -8,6 +8,7 @@
                 <a href="/projects">Project</a>
                 <ul class="dropdown">
                     <li><a href="/interios">Interiors</a></li>
+                    <li><a href="/miscellaneouse">Miscellaneouse</a></li>
                     <li class="has-children">
                         <a href="/arsitekture">Arsitekture</a>
                         <ul class="dropdown">
