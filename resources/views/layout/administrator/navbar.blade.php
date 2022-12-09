@@ -45,6 +45,15 @@
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn-magnify" href="/login">
+                        <i class="nc-icon nc-button-power"></i>
+                        <p>
+                            <span class="d-lg-none d-md-block">Logout</span>
+                        </p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

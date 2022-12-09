@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,16 @@ Route::get('/', function () {
 */
 
 Route::prefix('/administrator')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
+
+Route::get('/login', [LoginController::class, 'halamanLogin'])->name('login');
+Route::post('/postLogin', [LoginController::class, 'postLogin'])->name('postLogin');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
+
+
 
 Route::get('home', function () {
     return view('landing.home');
