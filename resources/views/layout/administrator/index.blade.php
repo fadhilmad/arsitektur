@@ -77,6 +77,7 @@
     <script src="{{asset('/assets/administrator/js/paper-dashboard.min.js')}}"></script>
     <script src="{{asset('/assets/administrator/demo/demo.js')}}"></script>
 
+
 </body>
 
 </html>

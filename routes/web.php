@@ -78,3 +78,15 @@ Route::get('/residential_index', function () {
 Route::get('/retail_index', function () {
     return view('landing.arsitekture.retail.retail_index');
 });
+
+Route::get('/project', function () {
+        return view('administrator.project.interios');
+});
+
+// Route::prefix('/administrator')->group(function () {
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+//     Route::get('/project', function () {
+//         return view('administrator.project.interios');
+//     });
+// });
