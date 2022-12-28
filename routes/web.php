@@ -32,9 +32,6 @@ Route::post('/postLogin', [LoginController::class, 'postLogin'])->name('postLogi
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
-
-
-
 Route::get('home', function () {
     return view('landing.home');
 });
