@@ -27,9 +27,11 @@ Route::prefix('/administrator')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
-Route::get('/login', [LoginController::class, 'halamanLogin'])->name('login');
-Route::post('/postLogin', [LoginController::class, 'postLogin'])->name('postLogin');
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+
+/*
+| Route Landing
+*/
 
 
 Route::get('home', function () {
@@ -77,7 +79,7 @@ Route::get('/retail_index', function () {
 });
 
 Route::get('/project', function () {
-        return view('administrator.project.interios');
+    return view('administrator.project.interios');
 });
 
 // Route::prefix('/administrator')->group(function () {

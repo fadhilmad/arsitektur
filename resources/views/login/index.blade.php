@@ -1,128 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login | </title>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        DSATELI3R - Administrator
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('assets/administrator/icons/font-awesome.min.css') }}">
 
-    <!-- Font Awesome -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-    rel="stylesheet"
-    />
+    <!-- CSS Files -->
+    <link href="{{ asset('assets/administrator/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/css/paper-dashboard.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/css/custom.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/demo/demo.css') }}" rel="stylesheet" />
 </head>
-<body>
-      <!--Main Navigation-->
-  <header>
-        <style>
-        #intro {
-            /* background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg); */
-            height: 100vh;
-            
-        }
 
-        /* Height for devices larger than 576px */
-        @media (min-width: 992px) {
-            #intro {
-            margin-top: -58.59px;
-            }
-        }
-
-        .navbar .nav-link {
-            color: #fff !important;
-        }
-        </style>
-
-        <!-- Background image -->
-        <div id="intro" class="bg-image shadow-2-strong">
-            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(232, 230, 230, 0.8);">
+<body class="login-page">
+    <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container">
+            <div class="navbar-wrapper">
+                <div class="navbar-toggle">
+                    <button type="button" class="navbar-toggler">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="javascript:;">DSATELI3R</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{{ url('/') }}" class="nav-link">
+                            <i class="nc-icon nc-layout-11"></i>
+                            Landing Page
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper wrapper-full-page ">
+        <div class="full-page section-image" filter-color="black"
+            style="background-image: url('{{ asset('assets/administrator/img/bg/fabio-mangione.jpg') }}')">
+            <div class="content">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        {{-- <div class="col-xl-5 col-md-8 text-center">
-                            
-                            <img src="/assets/img/img-1.jpeg" style="width:450px;height:150px;" class="card-img-top mb-3" alt="...">
-                        </div> --}}
-
-                        <div class="col-xl-5 col-md-8">
-                            <form class="bg-white  rounded-5 shadow-5-strong p-5" action="{{route('postLogin')}}" method="post">
-                                @csrf
-                                <!-- Email input -->
-                                <div class="text text-center p-4">
-                                    <h2>Login</h2>
-                                </div>
-
-                                <div class="form-outline mb-4 p-2">
-                                    <input type="email" id="form1Example1" name="email" class="form-control" />
-                                    <label class="form-label" for="form1Example1">Email address</label>
-                                </div>
-
-                                <!-- Password input -->
-                                <div class="form-outline mb-4 p-2">
-                                    <input type="password" id="form1Example2" name="password" class="form-control" />
-                                    <label class="form-label" for="form1Example2">Password</label>
-                                </div>
-
-                                <!-- 2 column grid layout for inline styling -->
-                                <div class="row mb-4">
-                                    <div class="col d-flex justify-content-center">
-                                    <!-- Checkbox -->
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                                        <label class="form-check-label" for="form1Example3">
-                                            Remember me
-                                        </label>
+                    <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                        <form id="form-login">
+                            <div class="card card-login">
+                                <div class="card-header">
+                                    <div class="card-header ">
+                                        <h3 class="header text-center">Login Page</h3>
                                     </div>
                                 </div>
-
-                                    <div class="col text-center">
-                                        <!-- Simple link -->
-                                        <a href="#!">Forgot password?</a>
+                                <div class="card-body ">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-single-02"></i>
+                                            </span>
+                                        </div>
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-key-25"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" name="password" placeholder="Password"
+                                            class="form-control">
+                                    </div>
+                                    <br />
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox">
+                                                <span class="form-check-sign"></span>
+                                                Remember Me
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <!-- Submit button -->
-                                <div class="container text-center">
-                                    <button type="submit" class="btn btn-lg btn-primary">Log In</button>
+                                <div class="card-footer ">
+                                    <button class="btn btn-danger btn-round btn-block mb-3" type="submit">Sign
+                                        In</button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a></li>
+                                <li><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
+                                <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, made with <i class="fa fa-heart heart"></i> by DSATELI3R
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <!-- Background image -->
-  </header>
-  <!--Main Navigation-->
+    </div>
 
-  <!--Footer-->
-  <footer class="bg-light text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-  </footer>
-  <!--Footer-->
+    <!--   Core JS Files   -->
+    <script src="{{ asset('assets/administrator/js/core/jquery.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/plugins/fecth-api.min.js') }}"></script>
+    <script>
+        let baseUrl = (url) => {
+            return `{{ url('/') }}${url}`;
+        }
+
+        $('#form-login').submit(function(e) {
+            e.preventDefault();
+
+            let data = new FormData(this);
+            $.httpRequest({
+                url: baseUrl('/api/auth'),
+                method: 'POST',
+                data: data,
+                response: (e) => {
+                    console.log(e);
+                }
+            });
+        });
+    </script>
+
 </body>
-<!-- JavaScript Bundle with Popper -->
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
-></script>
 
 </html>
