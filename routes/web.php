@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing.home');
 });
 
 /*
@@ -32,11 +32,6 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 /*
 | Route Landing
 */
-
-
-Route::get('home', function () {
-    return view('landing.home');
-});
 
 Route::get('/about', function () {
     return view('landing.about.index');
