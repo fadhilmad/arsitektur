@@ -47,7 +47,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link btn-magnify" href="/login">
+                    <a class="nav-link btn-magnify" href="/logout">
                         <i class="nc-icon nc-button-power"></i>
                         <p>
                             <span class="d-lg-none d-md-block">Logout</span>
