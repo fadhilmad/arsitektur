@@ -86,6 +86,10 @@ Route::get('/project', function () {
     return view('administrator.project.interios');
 });
 
+Route::get('/index', function () {
+    return view('layout.login.index');
+});
+
 // Route::prefix('/administrator')->group(function () {
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 

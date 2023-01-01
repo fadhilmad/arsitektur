@@ -23,7 +23,8 @@
             <li><a href="/contact">Contact Us</a></li>
 
 
-            <button type="submit" class="btn btn-success">login</button>
+            <li><a class="btn btn-info text-black" href="{{url ('/login')}}">login</a></li>
+            {{-- <button href="{{url ('/login')}}" class="btn btn-success">login</button> --}}
         </ul>
         <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
             <span></span>
