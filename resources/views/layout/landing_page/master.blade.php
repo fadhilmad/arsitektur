@@ -27,7 +27,9 @@
 	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/aos.css')}}">
 	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/style.css')}}">
 
-	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	@yield('css')
+
+	<title> @yield('tittle')</title>
 </head>
 <body>
 
@@ -82,5 +84,7 @@
     <script src="{{url('/template/property/untree.co-property/js/navbar.js')}}"></script>
     <script src="{{url('/template/property/untree.co-property/js/counter.js')}}"></script>
     <script src="{{url('/template/property/untree.co-property/js/custom.js')}}"></script>
+
+	@yield('script')
   </body>
   </html>

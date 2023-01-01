@@ -4,9 +4,9 @@
             <h3>Contact</h3>
             <address>43 Raymouth Rd. Baltemoer, London 3910</address>
             <ul class="list-unstyled links">
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+                <li><a href="#">+1(123)-456-7890</a></li>
+                <li><a href="#">+1(123)-456-7890</a></li>
+                <li><a href="#">info@mydomain.com</a></li>
             </ul>
         </div> <!-- /.widget -->
     </div> <!-- /.col-lg-4 -->
@@ -34,11 +34,11 @@
     <div class="col-lg-4">
         <div class="widget">
             <h3>Links</h3>
-            <ul class="list-unstyled links">
+            {{-- <ul class="list-unstyled links">
                 <li><a href="#">Our Vision</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
-            </ul>
+            </ul> --}}
 
             <ul class="list-unstyled social">
                 <li><a href="#"><span class="icon-instagram"></span></a></li>
