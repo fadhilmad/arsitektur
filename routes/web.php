@@ -23,11 +23,20 @@ Route::get('/', function () {
 |  Route Administrator
 */
 
-Route::prefix('/administrator')->group(function () {
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+/*
+|  Route Api
+*/
+
+Route::prefix('/api')->group(function () {
+    Route::post('/auth', [LoginController::class, 'auth'])->name('auth');
+});
 
 /*
 | Route Landing

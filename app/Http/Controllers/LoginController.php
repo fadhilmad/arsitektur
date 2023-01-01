@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Libraries\System;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -21,19 +22,29 @@ class LoginController extends Controller
 
     public function auth(Request $request)
     {
-        
-        // if (Auth::attempt($request->only('user_email', 'password'))) {
-        //     return redirect('dashboard');
-        // }
+        $authData = [
+            'user_email' => $request->input('email'),
+            'password' => $request->input('password')
+        ];
 
-        // return redirect('/');
+        if (!Auth::attempt($authData)) return $this->system->response(404, [
+            'statusCode' => 404,
+            'message' => 'Email atau Password Salah !'
+        ]);
 
-        // var_dump($request->input());
-        // die;
+        Session::put('uid', Auth::id());
 
         return $this->system->response(200, [
             'statusCode' => 200,
-            'message' => 'Fetch Berhasil'
+            'message' => 'Login berhasil'
         ]);
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+
+        return redirect('/login');
     }
 }
