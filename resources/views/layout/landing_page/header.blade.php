@@ -1,6 +1,9 @@
 <div class="menu-bg-wrap">
     <div class="site-navigation">
-        <a href="home" class="logo m-0 float-start">DSATELI3R</a>
+
+        <a><img href="/" src="{{url('assets/img/img-5-blt.png')}}" class="rounded-2" style="widht:10px; height:35px" alt=""></a>
+        {{-- <a href="/" class="logo m-0 text-center">DSATELI3R</a> --}}
+
 
         <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
             <li class="active"><a href="/">Home</a></li>
