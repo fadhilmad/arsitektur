@@ -20,7 +20,7 @@
     <link href="{{ asset('assets/administrator/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/paper-dashboard.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/custom.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/administrator/demo/demo.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/css/plugins/toastr.min.css') }}" rel="stylesheet" />
 </head>
 
 <body class="login-page">
@@ -135,6 +135,12 @@
     <script src="{{ asset('/assets/administrator/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('/assets/administrator/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/assets/administrator/js/plugins/fecth-api.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/plugins/loadingoverlay.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/plugins/toastr.min.js') }}"></script>
+    <script>
+        toastr.options.positionClass = "toast-top-center mt-3";
+        toastr.options.timeOut = 1500;
+    </script>
     <script>
         let baseUrl = (url) => {
             return `{{ url('/') }}${url}`;
@@ -144,12 +150,18 @@
             e.preventDefault();
 
             let data = new FormData(this);
+            $.LoadingOverlay('show');
             $.httpRequest({
                 url: baseUrl('/api/auth'),
                 method: 'POST',
                 data: data,
-                response: (e) => {
-                    console.log(e);
+                response: (res) => {
+                    $.LoadingOverlay('hide');
+                    if (res.statusCode == 200) {
+                        window.location.replace(baseUrl('/administrator/dashboard'));
+                    } else {
+                        toastr.error(res.message);
+                    }
                 }
             });
         });
