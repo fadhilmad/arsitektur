@@ -1,5 +1,9 @@
 @extends('layout.landing_page.master')
 
+@section('tittle')
+	About | DSATELI3R
+@endsection
+
 @section('banner')
 <div class="hero page-inner overlay" style="background-image: url('/template/property/untree.co-property/images/hero_bg_3.jpg');">
 

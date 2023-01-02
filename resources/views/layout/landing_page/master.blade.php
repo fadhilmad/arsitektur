@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="favicon.png">
+	<link rel="shortcut icon" href="{{url('assets/img/img-4-blt.png')}}">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -27,7 +27,9 @@
 	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/aos.css')}}">
 	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/style.css')}}">
 
-	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	@yield('css')
+
+	<title> @yield('tittle')</title>
 </head>
 <body>
 
@@ -82,5 +84,7 @@
     <script src="{{url('/template/property/untree.co-property/js/navbar.js')}}"></script>
     <script src="{{url('/template/property/untree.co-property/js/counter.js')}}"></script>
     <script src="{{url('/template/property/untree.co-property/js/custom.js')}}"></script>
+
+	@yield('script')
   </body>
   </html>

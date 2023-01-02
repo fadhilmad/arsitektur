@@ -1,5 +1,9 @@
 @extends('layout.landing_page.master')
 
+@section('tittle')
+	Retail | DSATELI3R
+@endsection
+
 @section('banner')
 <div class="hero page-inner overlay" style="background-image: url('/template/property/untree.co-property/images/hero_bg_3.jpg');">
 	<div class="container">
@@ -23,7 +27,7 @@
 <div class="section">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-lg-7">
+            {{-- <div class="col-lg-7">
                 <div class="img-property-slide-wrap">
                     <div class="img-property-slide">
                         <img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
@@ -31,12 +35,24 @@
                         <img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
                     </div>
                 </div>
-            </div>
+            </div> --}}
+			<div class="col-lg-7 ">
+				 <div class="video-container"> 
+					<iframe allowfullscreen="" class="YOUTUBE-iframe-video rounded-3" frameborder="0" height="320" src="https://www.youtube.com/embed/sMtWxBOL34M" width="100%"></iframe> 
+				</div>
+				<br>
+				<div class="vidio-discripsi">
+					<div class="col">
+						<h2 class="heading text-primary mb-3">5232 California Ave. 21BC</h2>
+						<div class="text">
+							<p class="meta">California, United States</p>
+							<p class="text-black-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laborum quo quos omnis sed magnam id, ducimus saepe, debitis error earum, iste dicta odio est sint dolorem magni animi tenetur.</p>
+							<p class="text-black-50">Perferendis eligendi reprehenderit, assumenda molestias nisi eius iste reiciendis porro tenetur in, repudiandae amet libero. Doloremque, reprehenderit cupiditate error laudantium qui, esse quam debitis, eum cumque perferendis, illum harum expedita.</p>
+						</div>
+					</div>
+				</div>
+			</div>
             <div class="col-lg-4">
-                <h2 class="heading text-primary">5232 California Ave. 21BC</h2>
-                <p class="meta">California, United States</p>
-                <p class="text-black-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laborum quo quos omnis sed magnam id, ducimus saepe, debitis error earum, iste dicta odio est sint dolorem magni animi tenetur.</p>
-                <p class="text-black-50">Perferendis eligendi reprehenderit, assumenda molestias nisi eius iste reiciendis porro tenetur in, repudiandae amet libero. Doloremque, reprehenderit cupiditate error laudantium qui, esse quam debitis, eum cumque perferendis, illum harum expedita.</p>
                 
                 <div class="d-block agent-box p-5">
                     <div class="img mb-4">

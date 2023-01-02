@@ -1,5 +1,9 @@
 @extends('layout.landing_page.master')
 
+@section('tittle')
+	Contact | DSATELI3R
+@endsection
+
 @section('banner')
 <div class="hero page-inner overlay" style="background-image: url('/template/property/untree.co-property/images/hero_bg_1.jpg');">
 
@@ -83,7 +87,7 @@
 </div> <!-- /.untree_co-section -->
 @endsection
 
-@section('team')
+{{-- @section('team')
 <div class="section section-5 bg-light">
 	<div class="container">
 		<div class="row justify-content-center  text-center mb-5">
@@ -136,4 +140,4 @@
 		</div>
 	</div>
 </div>
-@endsection
+@endsection --}}
