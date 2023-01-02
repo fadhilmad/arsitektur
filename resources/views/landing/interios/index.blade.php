@@ -27,15 +27,6 @@
 <div class="section">
     <div class="container">
         <div class="row justify-content-between">
-            {{-- <div class="col-lg-7">
-                <div class="img-property-slide-wrap">
-                    <div class="img-property-slide">
-                        <img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
-                        <img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
-                        <img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
-                    </div>
-                </div>
-            </div> --}}
 
 			<div class="col-lg-7 ">
 				 <div class="video-container"> 
@@ -44,11 +35,9 @@
 				<br>
 				<div class="vidio-discripsi">
 					<div class="col">
-						<h2 class="heading text-primary mb-3">5232 California Ave. 21BC</h2>
+						<h2 class="heading text-primary mb-3">Sarana_stell</h2>
 						<div class="text">
-							<p class="meta">California, United States</p>
-							<p class="text-black-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laborum quo quos omnis sed magnam id, ducimus saepe, debitis error earum, iste dicta odio est sint dolorem magni animi tenetur.</p>
-							<p class="text-black-50">Perferendis eligendi reprehenderit, assumenda molestias nisi eius iste reiciendis porro tenetur in, repudiandae amet libero. Doloremque, reprehenderit cupiditate error laudantium qui, esse quam debitis, eum cumque perferendis, illum harum expedita.</p>
+							<p class="meta">Arsitektur Interior dan Desain merupakan mata kuliah yang sangat dinamik! Dimana ia mencakup berbagai aspek seperti desain, pemikiran yang kreatif, menggambar, teknologi, 2D/3D, pembuatan maket, masalah lingkungan, kelangsungan hidup, komunikasi, penelitian, teori kebudayaan dan sebagainya. Anda juga akan mempelajari tentang bagaimana cara mempresentasikan hasil karya Anda, baik secara visual maupun tertulis, dan dikombinasikan dengan grafik, foto, dan bahkan film. Presentasi sangatlah penting, karena akan sangat sayang jika Anda memiliki hasil karya yang hebat tetapi Anda tidak bisa membuat orang lain mengerti hasil karya Anda!</p>
 						</div>
 					</div>
 				</div>
@@ -82,7 +71,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -103,7 +92,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -111,7 +100,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -132,7 +121,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -140,7 +129,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -161,7 +150,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -171,7 +160,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_4.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -192,7 +181,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -200,7 +189,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_5.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -221,7 +210,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -229,7 +218,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_6.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -250,7 +239,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -260,7 +249,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_7.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -281,7 +270,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -289,7 +278,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_8.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -310,7 +299,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -318,7 +307,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -339,7 +328,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->

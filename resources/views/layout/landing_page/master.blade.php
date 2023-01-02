@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="{{url('assets/img/img-4-blt.png')}}">
+	<link rel="shortcut icon" href="{{url('assets/img/img-4-blt-rm.png')}}">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
