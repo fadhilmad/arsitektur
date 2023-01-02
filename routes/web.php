@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/users', [UsersController::class, 'index'])->name('users');
 });
 
 /*
