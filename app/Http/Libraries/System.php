@@ -16,6 +16,6 @@ class System
         *   500 => Internal Server Error (Digunakan ketika terjadi kesalahan di sisi server)
         */
 
-        return response()->json($data, $statusCode);
+        return response()->json($data, $statusCode, ['Content-type' => 'application/json'], JSON_PRETTY_PRINT);
     }
 }

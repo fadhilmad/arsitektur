@@ -37,7 +37,15 @@ Route::prefix('/administrator')->middleware('auth')->group(function () {
 */
 
 Route::prefix('/api')->group(function () {
-    Route::post('/auth', [LoginController::class, 'auth'])->name('auth');
+    Route::post('/auth', [LoginController::class, 'auth']);
+});
+
+Route::prefix('/api/administrator')->middleware('auth')->group(function () {
+    // Users
+    Route::post('/users-fetch', [UsersController::class, 'fetch']);
+    Route::post('/users', [UsersController::class, 'store']);
+    Route::post('/users/{id}', [UsersController::class, 'update']);
+    Route::delete('/users/{id}', [UsersController::class, 'destroy']);
 });
 
 /*
