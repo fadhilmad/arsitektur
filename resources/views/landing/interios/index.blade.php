@@ -9,12 +9,12 @@
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-9 text-center mt-5">
-				<h1 class="heading" data-aos="fade-up">INTERIOS</h1>
+				<h1 class="heading" data-aos="fade-up">Interiors</h1>
 
 				<nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
 					<ol class="breadcrumb text-center justify-content-center">
-						<li class="breadcrumb-item "><a href="/home">Home</a></li>
-						<li class="breadcrumb-item active text-white-50" aria-current="page">INTERIOS</li>
+						<li class="breadcrumb-item "><a href="/">Home</a></li>
+						<li class="breadcrumb-item active text-white-50" aria-current="page">Interiors</li>
 					</ol>
 				</nav>
 			</div>
@@ -35,7 +35,7 @@
 				<br>
 				<div class="vidio-discripsi">
 					<div class="col">
-						<h2 class="heading text-primary mb-3">Sarana_stell</h2>
+						<h2 class="heading text-primary mb-3">Interiors</h2>
 						<div class="text">
 							<p class="meta">Arsitektur Interior dan Desain merupakan mata kuliah yang sangat dinamik! Dimana ia mencakup berbagai aspek seperti desain, pemikiran yang kreatif, menggambar, teknologi, 2D/3D, pembuatan maket, masalah lingkungan, kelangsungan hidup, komunikasi, penelitian, teori kebudayaan dan sebagainya. Anda juga akan mempelajari tentang bagaimana cara mempresentasikan hasil karya Anda, baik secara visual maupun tertulis, dan dikombinasikan dengan grafik, foto, dan bahkan film. Presentasi sangatlah penting, karena akan sangat sayang jika Anda memiliki hasil karya yang hebat tetapi Anda tidak bisa membuat orang lain mengerti hasil karya Anda!</p>
 						</div>
@@ -43,15 +43,15 @@
 				</div>
 			</div>
             <div class="col-lg-4">
-                <div class="d-block agent-box p-5">
+                <div class="d-block agent-box p-3 text-center">
                     <div class="img mb-4">
                         <img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image" class="img-fluid">
                     </div>
                     <div class="text">
-                        <h3 class="mb-0">Alicia Huston</h3>
-                        <div class="meta mb-3">Real Estate</div>
+                        <h3 class="mb-0">Mas Deddy</h3>
+                        <div class="meta mb-3">Founder</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum quo quos omnis sed magnam id ducimus saepe</p>
-                        <ul class="list-unstyled social dark-hover d-flex">
+                        <ul class="list-unstyled social dark-hover d-flex justify-content-center">
                             <li class="me-1"><a href="#"><span class="icon-instagram"></span></a></li>
                             <li class="me-1"><a href="#"><span class="icon-twitter"></span></a></li>
                             <li class="me-1"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -76,10 +76,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -105,10 +105,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -134,10 +134,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -165,10 +165,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -194,10 +194,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -223,10 +223,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -254,10 +254,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -283,10 +283,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -312,10 +312,10 @@
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">

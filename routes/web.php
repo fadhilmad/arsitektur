@@ -52,7 +52,7 @@ Route::get('/contact', function () {
 
 
 Route::get('/detail_project', function () {
-    return view('landing.projects.detail_project');
+    return view('landing.detail_project');
 });
 
 Route::get('/interios', function () {

@@ -9,12 +9,12 @@
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-9 text-center mt-5">
-				<h1 class="heading" data-aos="fade-up">ARSITECTURES</h1>
+				<h1 class="heading" data-aos="fade-up">Architecture</h1>
 
 				<nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
 					<ol class="breadcrumb text-center justify-content-center">
-						<li class="breadcrumb-item "><a href="/home">Home</a></li>
-						<li class="breadcrumb-item active text-white-50" aria-current="page">ARSITECTURES</li>
+						<li class="breadcrumb-item "><a href="/">Home</a></li>
+						<li class="breadcrumb-item active text-white-50" aria-current="page">Architecture</li>
 					</ol>
 				</nav>
 			</div>
@@ -27,15 +27,6 @@
 <div class="section">
     <div class="container">
         <div class="row justify-content-between">
-            {{-- <div class="col-lg-7">
-                <div class="img-property-slide-wrap">
-                    <div class="img-property-slide">
-                        <img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
-                        <img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
-                        <img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
-                    </div>
-                </div>
-            </div> --}}
 
 			<div class="col-lg-7 ">
 				 <div class="video-container"> 
@@ -44,26 +35,24 @@
 				<br>
 				<div class="vidio-discripsi">
 					<div class="col">
-						<h2 class="heading text-primary mb-3">5232 California Ave. 21BC</h2>
+						<h2 class="heading text-primary mb-3">Architecture</h2>
 						<div class="text">
-							<p class="meta">California, United States</p>
-							<p class="text-black-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laborum quo quos omnis sed magnam id, ducimus saepe, debitis error earum, iste dicta odio est sint dolorem magni animi tenetur.</p>
-							<p class="text-black-50">Perferendis eligendi reprehenderit, assumenda molestias nisi eius iste reiciendis porro tenetur in, repudiandae amet libero. Doloremque, reprehenderit cupiditate error laudantium qui, esse quam debitis, eum cumque perferendis, illum harum expedita.</p>
+							<p class="meta">Arsitektur adalah seni yang dilakukan oleh setiap individu untuk menyatakan imajinasi dan ilmu mereka ke dalam suatu rancangan bangunan. Dalam artian yang lebih luas, arsitektur mencakup perancangan dan pembangunan di suatu lingkungan, baik mikro maupun makro. Di tingkat mikro, desain interior mencakup masalah desain bangunan, desain perabot, dan desain produk. Di tingkat makro, desain arsitektur mencakup masalah perencanaan, kota, perencanaan perkotaan, dan dan arsitektur lanskap. Arsitektur juga termasuk ke dalam seni rupa terapan.</p>
+							
 						</div>
 					</div>
 				</div>
 			</div>
             <div class="col-lg-4">
-                
-                <div class="d-block agent-box p-5">
+                <div class="d-block agent-box p-3 text-center">
                     <div class="img mb-4">
                         <img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image" class="img-fluid">
                     </div>
                     <div class="text">
-                        <h3 class="mb-0">Alicia Huston</h3>
-                        <div class="meta mb-3">Real Estate</div>
+                        <h3 class="mb-0">Mas Deddy</h3>
+                        <div class="meta mb-3">Founder</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum quo quos omnis sed magnam id ducimus saepe</p>
-                        <ul class="list-unstyled social dark-hover d-flex">
+                        <ul class="list-unstyled social dark-hover d-flex justify-content-center">
                             <li class="me-1"><a href="#"><span class="icon-instagram"></span></a></li>
                             <li class="me-1"><a href="#"><span class="icon-twitter"></span></a></li>
                             <li class="me-1"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -83,15 +72,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -104,7 +93,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -112,15 +101,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -133,7 +122,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -141,15 +130,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -162,7 +151,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -172,15 +161,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_4.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -193,7 +182,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -201,15 +190,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_5.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -222,7 +211,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -230,15 +219,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_6.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -251,7 +240,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -261,15 +250,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_7.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -282,7 +271,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -290,15 +279,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_8.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -311,7 +300,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -319,15 +308,15 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="property-single.html" class="img">
+					<a href="detail_project" class="img">
 						<img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
 					</a>
 
 					<div class="property-content">
-						<div class="price mb-2"><span>$1,291,000</span></div>
+						
 						<div>
-							<span class="d-block mb-2 text-black-50">5232 California Fake, Ave. 21BC</span>
-							<span class="city d-block mb-3">California, USA</span>
+							<span class="city d-block mb-3">Judul Project</span>
+							<span class="d-block mb-2 text-black-50">Descripsi project</span>
 
 							<div class="specs d-flex mb-4">
 								<span class="d-block d-flex align-items-center me-3">
@@ -340,7 +329,7 @@
 								</span>
 							</div>
 
-							<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
