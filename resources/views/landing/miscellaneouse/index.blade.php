@@ -27,11 +27,7 @@
 <div class="section">
     <div class="container">
         <div class="row justify-content-between">
-			<div class="col-lg-7 ">
-				 <div class="video-container"> 
-					<iframe allowfullscreen="" class="YOUTUBE-iframe-video rounded-3" frameborder="0" height="320" src="https://www.youtube.com/embed/sMtWxBOL34M" width="100%"></iframe> 
-				</div>
-				<br>
+			<div class="col-lg-12 ">
 				<div class="vidio-discripsi">
 					<div class="col">
 						<h2 class="heading text-primary mb-3">Miscellaneouse</h2>
@@ -42,25 +38,6 @@
 					</div>
 				</div>
 			</div>
-            <div class="col-lg-4">
-                <div class="d-block agent-box p-3 text-center">
-                    <div class="img mb-4">
-                        <img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="text">
-                        <h3 class="mb-0">Mas Deddy</h3>
-                        <div class="meta mb-3">Founder</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum quo quos omnis sed magnam id ducimus saepe</p>
-                        <ul class="list-unstyled social dark-hover d-flex justify-content-center">
-                            <li class="me-1"><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-linkedin"></span></a></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -71,7 +48,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -92,7 +69,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -100,7 +77,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -121,7 +98,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -129,7 +106,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -150,7 +127,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -160,7 +137,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_4.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -181,7 +158,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -189,7 +166,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_5.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -210,7 +187,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -218,7 +195,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_6.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -239,7 +216,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -249,7 +226,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_7.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -270,7 +247,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -278,7 +255,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_8.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -299,7 +276,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->
@@ -307,7 +284,7 @@
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="property-item mb-30">
 
-					<a href="detail_project" class="img">
+					<a href="detail_miscellaneouse" class="img">
 						<img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
 					</a>
 
@@ -328,7 +305,7 @@
 								</span>
 							</div>
 
-							<a href="detail_project" class="btn btn-primary py-2 px-3">See details</a>
+							<a href="detail_miscellaneouse" class="btn btn-primary py-2 px-3">See details</a>
 						</div>
 					</div>
 				</div> <!-- .item -->

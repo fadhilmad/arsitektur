@@ -28,10 +28,6 @@
     <div class="container">
         <div class="row justify-content-between">
 			<div class="col-lg-7 ">
-				 <div class="video-container"> 
-					<iframe allowfullscreen="" class="YOUTUBE-iframe-video rounded-3" frameborder="0" height="320" src="https://www.youtube.com/embed/sMtWxBOL34M" width="100%"></iframe> 
-				</div>
-				<br>
 				<div class="vidio-discripsi">
 					<div class="col">
 						<h2 class="heading text-primary mb-3">Retail</h2>
@@ -42,25 +38,6 @@
 					</div>
 				</div>
 			</div>
-            <div class="col-lg-4">
-                <div class="d-block agent-box p-3 text-center">
-                    <div class="img mb-4">
-                        <img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="text">
-                        <h3 class="mb-0">Mas Deddy</h3>
-                        <div class="meta mb-3">Founder</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum quo quos omnis sed magnam id ducimus saepe</p>
-                        <ul class="list-unstyled social dark-hover d-flex justify-content-center">
-                            <li class="me-1"><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-linkedin"></span></a></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
