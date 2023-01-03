@@ -29,14 +29,14 @@ class LoginController extends Controller
             'password' => $request->input('password')
         ];
 
-        if (!Auth::attempt($authData)) return $this->system->response(404, [
+        if (!Auth::attempt($authData)) return $this->system->responseServer(404, [
             'statusCode' => 404,
             'message' => 'Email atau Password Salah !'
         ]);
 
         Session::put('uid', Auth::id());
 
-        return $this->system->response(200, [
+        return $this->system->responseServer(200, [
             'statusCode' => 200,
             'message' => 'Login berhasil'
         ]);

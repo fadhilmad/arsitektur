@@ -30,12 +30,12 @@ class Controller extends BaseController
             $messageError[$key] = @$messageData[0];
         }
 
-        return $this->system->response(400, [
+        return response()->json([
             'statusCode' => 400,
             'message' => 'Mohon isi form dengan benar !',
             'data' => [
                 'error' => $messageError
             ]
-        ]);
+        ], 400, ['Content-type' => 'application/json'], JSON_PRETTY_PRINT);
     }
 }

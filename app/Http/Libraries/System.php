@@ -4,7 +4,7 @@ namespace App\Http\Libraries;
 
 class System
 {
-    public function response($statusCode, $data = [])
+    public function responseServer($statusCode, $data = [])
     {
         /*
         *   Informasi Status Code Server

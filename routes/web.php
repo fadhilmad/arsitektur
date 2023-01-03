@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\Administrator\InteriorController;
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('/projeck-interior', [InteriorController::class, 'index'])->name('interior');
+    Route::get('/images/projeck-interior', [InteriorController::class, 'image'])->name('image_interior');
 });
 
 /*
@@ -46,6 +49,15 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
     Route::post('/users', [UsersController::class, 'store']);
     Route::post('/users/{id}', [UsersController::class, 'update']);
     Route::delete('/users/{id}', [UsersController::class, 'destroy']);
+
+    // Interior
+    Route::post('/interior-fetch', [InteriorController::class, 'fetch']);
+    Route::post('/interior', [InteriorController::class, 'store']);
+    Route::post('/interior/{id}', [InteriorController::class, 'update']);
+    Route::delete('/interior/{id}', [InteriorController::class, 'destroy']);
+
+    // Image Interior
+    Route::post('/images/interior-fetch', [InteriorController::class, 'image_fetch']);
 });
 
 /*
