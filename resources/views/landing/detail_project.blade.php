@@ -9,12 +9,12 @@
 	<div class="container">
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-9 text-center mt-5">
-				<h1 class="heading" data-aos="fade-up">5232 California AVE. 21BC</h1>
+				<h1 class="heading" data-aos="fade-up">Sarana_stell</h1>
 
 				<nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
 					<ol class="breadcrumb text-center justify-content-center">
-						<li class="breadcrumb-item "><a href="/home">Home</a></li>
-						<li class="breadcrumb-item active text-white-50" aria-current="page">5232 California AVE. 21BC</li>
+						<li class="breadcrumb-item "><a href="/">Home</a></li>
+						<li class="breadcrumb-item active text-white-50" aria-current="page">Sarana_stell</li>
 					</ol>
 				</nav>
 			</div>
@@ -27,16 +27,6 @@
 <div class="section">
     <div class="container">
         <div class="row justify-content-between">
-            {{-- <div class="col-lg-7">
-                <div class="img-property-slide-wrap">
-                    <div class="img-property-slide">
-                        <img src="/template/property/untree.co-property/images/img_1.jpg" alt="Image" class="img-fluid">
-                        <img src="/template/property/untree.co-property/images/img_2.jpg" alt="Image" class="img-fluid">
-                        <img src="/template/property/untree.co-property/images/img_3.jpg" alt="Image" class="img-fluid">
-                    </div>
-                </div>
-            </div> --}}
-
 			<div class="col-lg-7 ">
 				 <div class="video-container"> 
 					<iframe allowfullscreen="" class="YOUTUBE-iframe-video rounded-3" frameborder="0" height="320" src="https://www.youtube.com/embed/sMtWxBOL34M" width="100%"></iframe> 

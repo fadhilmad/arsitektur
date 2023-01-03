@@ -2,11 +2,11 @@
     <div class="col-lg-4">
         <div class="widget">
             <h3>Contact</h3>
-            <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+            <address>43 Raymouth Rd. Baltemoer,London 3910</address>
             <ul class="list-unstyled links">
                 <li><a href="#">+1(123)-456-7890</a></li>
-                <li><a href="#">+1(123)-456-7890</a></li>
-                <li><a href="#">info@mydomain.com</a></li>
+                <li><a href="#">Sunday-Friday:<br>11:00 AM - 2300 PM</a></li>
+                <li><a href="#">info@Untree.com</a></li>
             </ul>
         </div> <!-- /.widget -->
     </div> <!-- /.col-lg-4 -->
@@ -34,19 +34,18 @@
     <div class="col-lg-4">
         <div class="widget">
             <h3>Links</h3>
-            {{-- <ul class="list-unstyled links">
-                <li><a href="#">Our Vision</a></li>
+            <ul class="list-unstyled links">
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Our Team</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
-            </ul> --}}
+            </ul>
 
             <ul class="list-unstyled social">
                 <li><a href="#"><span class="icon-instagram"></span></a></li>
                 <li><a href="#"><span class="icon-twitter"></span></a></li>
                 <li><a href="#"><span class="icon-facebook"></span></a></li>
                 <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                <li><a href="#"><span class="icon-dribbble"></span></a></li>
             </ul>
         </div> <!-- /.widget -->
     </div> <!-- /.col-lg-4 -->
@@ -61,7 +60,7 @@
         **==========
         -->
 
-        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
+        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://dsateli3r.com/"> Dsateli3r</a> <!-- License information: https://untree.co/license/ -->
         </p>
 
       </div>
