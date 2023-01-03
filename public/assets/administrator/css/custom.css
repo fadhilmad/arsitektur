@@ -2,3 +2,19 @@
 .sidebar .nav {
     overflow-x: hidden !important;
 }
+
+.card-header-btn {
+    padding: 10px 30px 0px !important;
+}
+
+.modal-dialog {
+    padding-top: 0px !important;
+}
+
+.on-hover {
+    cursor: pointer;
+}
+
+.dataTables_paginate .pagination {
+    justify-content: end;
+}
