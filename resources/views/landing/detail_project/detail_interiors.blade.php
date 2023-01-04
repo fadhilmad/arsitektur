@@ -27,13 +27,7 @@
 <div class="section">
     <div class="container">
         <div class="row justify-content-between">
-			<div class="col-lg-7 ">
-				<div class="card shadow-lg p-3 bg-body rounded">
-                    <div class="video-container"> 
-                       <iframe allowfullscreen="" class="YOUTUBE-iframe-video rounded-3" frameborder="0" height="320" src="https://www.youtube.com/embed/sMtWxBOL34M" width="100%"></iframe> 
-                   </div>
-                </div>
-				<br>
+			<div class="col-lg-7">
 				<div class="vidio-discripsi">
 					<div class="col">
 						<h2 class="heading text-primary mb-3">Sarana_stell</h2>
@@ -42,25 +36,37 @@
 						</div>
 					</div>
 				</div>
+				<div class="card shadow-lg p-3 bg-body rounded mb-3">
+                    <div class="video-container"> 
+                       <iframe allowfullscreen="" class="YOUTUBE-iframe-video rounded-3" frameborder="0" height="300" src="https://www.youtube.com/embed/sMtWxBOL34M" width="100%"></iframe> 
+                   </div>
+                </div>
+
+				<input class="form-control form-control-sm mb-3" type="text" placeholder="Comment.." aria-label=".form-control-sm example">
 			</div>
 
             <div class="col-lg-4">
-                <div class="d-block text-center agent-box">
-                    <div class="img mb-4">
-                        <img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image" class="img-fluid">
-                    </div>
-                    <div class="text">
-                        <h3 class="mb-0">Mas Deddy</h3>
-                        <div class="meta mb-3">Founder</div>
-                        <p>Descripsi Biografi</p>
-                        <ul class="list-unstyled justify-content-center social dark-hover d-flex">
-                            <li class="me-1"><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="me-1"><a href="#"><span class="icon-linkedin"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="card shadow-lg p-3 bg-body rounded mb-3">
+
+					<div class="img d-flex justify-content-center mb-4">
+						<div></div>
+						<a><img href="/" src="{{url('assets/img/img-5-blt.png')}}" class="rounded-2" style="widht:10px; height:35px" alt=""></a>
+					</div>
+					<form action="">
+						<div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Name</label>
+							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+						</div>
+						<div class="mb-3">
+							<label for="exampleFormControlTextarea1" class="form-label">Coment</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+						</div>
+						<div class="col d-flex justify-content-between">
+							<div></div>
+							<button type="button" class="btn btn-primary btn-sm">Send</button>
+						</div>
+					</form>
+				</div>
             </div>
         </div>
     </div>
