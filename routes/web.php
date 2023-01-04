@@ -64,6 +64,10 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
 | Route Landing
 */
 
+Route::get('/index', function () {
+    return view('layout.login.index');
+});
+
 Route::get('/about', function () {
     return view('landing.about.index');
 });
@@ -105,8 +109,16 @@ Route::get('/project', function () {
     return view('administrator.project.interios');
 });
 
-Route::get('/index', function () {
-    return view('layout.login.index');
+Route::get('/detail_interiors', function () {
+    return view('landing.detail_project.detail_interiors');
+});
+
+Route::get('/detail_miscellaneouse', function () {
+    return view('landing.detail_project.detail_miscellaneouse');
+});
+
+Route::get('/detail_arsitekture', function () {
+    return view('landing.detail_project.detail_arsitekture');
 });
 
 // Route::prefix('/administrator')->group(function () {
