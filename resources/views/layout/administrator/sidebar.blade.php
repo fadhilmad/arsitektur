@@ -103,7 +103,7 @@
             </div>
         </li>
         <li>
-            <a href="{{ url('/administrator/user') }}">
+            <a href="{{ url('/administrator/users') }}">
                 <i class="nc-icon nc-single-02"></i>
                 <p>
                     Users <b class=""></b>

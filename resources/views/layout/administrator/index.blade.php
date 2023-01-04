@@ -13,12 +13,15 @@
 
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('assets/administrator/icons/font-awesome.min.css') }}">
 
     <!-- CSS Files -->
     <link href="{{ asset('assets/administrator/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/paper-dashboard.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/css/plugins/toastr.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/demo/demo.css') }}" rel="stylesheet" />
+    @yield('css')
 </head>
 
 <body class="">
@@ -70,12 +73,23 @@
     <script src="{{asset('/assets/administrator/js/plugins/bootstrap-selectpicker.js')}}"></script>
     <script src="{{asset('/assets/administrator/js/plugins/bootstrap-datetimepicker.js')}}"></script>
     <script src="{{asset('/assets/administrator/js/plugins/jquery.dataTables.min.js')}}"></script>
+    <script src="{{ asset('/assets/administrator/js/plugins/loadingoverlay.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/plugins/toastr.min.js') }}"></script>
+    <script src="{{ asset('/assets/administrator/js/plugins/fecth-api.min.js') }}"></script>
 
     <!-- Chart JS -->
     <script src="{{asset('/assets/administrator/js/plugins/chartjs.min.js')}}"></script>
     <script src="{{asset('/assets/administrator/js/paper-dashboard.min.js')}}"></script>
     <script src="{{asset('/assets/administrator/demo/demo.js')}}"></script>
-
+    <script>
+        let baseUrl = (url) => {
+            return `{{ url('/') }}${url}`;
+        }
+        let assetsUrl = (url) => {
+            return `{{ asset('/') }}${url}`;
+        }
+    </script>
+    @yield('javascript')
 
 </body>
 
