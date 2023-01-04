@@ -32,7 +32,7 @@ Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/users', [UsersController::class, 'index'])->name('users');
     Route::get('/projeck-interior', [InteriorController::class, 'index'])->name('interior');
-    Route::get('/images/projeck-interior', [InteriorController::class, 'image'])->name('image_interior');
+    Route::get('/projeck-interior-image/{id}', [InteriorController::class, 'image'])->name('image_interior');
 });
 
 /*
@@ -57,7 +57,10 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
     Route::delete('/interior/{id}', [InteriorController::class, 'destroy']);
 
     // Image Interior
-    Route::post('/images/interior-fetch', [InteriorController::class, 'image_fetch']);
+    Route::post('/interior-image-fetch/{id}', [InteriorController::class, 'image_fetch']);
+    Route::post('/interior-image', [InteriorController::class, 'image_store']);
+    Route::post('/interior-image/{id}', [InteriorController::class, 'image_update']);
+    Route::delete('/interior-image/{id}', [InteriorController::class, 'image_destroy']);
 });
 
 /*
