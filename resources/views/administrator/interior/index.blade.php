@@ -80,6 +80,7 @@
                                         </div>
                                     </div>
                                     <input class="d-none" type="file" name="thumbnail" id="image-file">
+                                    <small class="message-error text-danger" data-target="thumbnail_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -87,15 +88,15 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="nama-interior">Nama Interior</label>
-                                            <input type="text" class="form-control" name="nama" id="nama-interior">
+                                            <input type="text" class="form-control" name="nama" id="nama-interior" placeholder="Nama Interior">
                                             <small class="message-error text-danger" data-target="nama_error"></small>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="video-link">Video Link</label>
-                                            <input type="text" class="form-control" name="video_link" id="video-link">
-                                            <small class="message-error text-danger" data-target="nama_error"></small>
+                                            <input type="text" class="form-control" name="video_link" id="video-link" placeholder="https://www.youtube.com/embed/FZOzH9EzZyA">
+                                            <small class="message-error text-danger" data-target="video_link_error"></small>
                                         </div>
                                     </div>
                                 </div>

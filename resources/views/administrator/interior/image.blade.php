@@ -44,10 +44,11 @@
     <div id="modal-form" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <form id="form-data" action="{{ url('api/administrator/interior') }}" method="post">
+                <form id="form-data" action="{{ url('api/administrator/interior-image') }}" method="post">
                     <input type="hidden" name="id">
+                    <input type="hidden" name="interior_id">
                     <div class="modal-header d-flex">
-                        <h5 class="modal-title">Interior Form</h5>
+                        <h5 class="modal-title">Foto Interior Form</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -56,14 +57,14 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="alamat">Thumbnail</label>
+                                    <label for="alamat">Foto Interior</label>
                                     <div class="card card-upload-image on-hover">
                                         <div class="card-body text-center">
                                             <img class="image-preview" src="{{ url('/uploads/interior/no-image.png') }}"
                                                 alt="no-image.png">
                                         </div>
                                     </div>
-                                    <input class="d-none" type="file" name="thumbnail" id="image-file">
+                                    <input class="d-none" type="file" name="images" id="image-file">
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -86,5 +87,8 @@
 @endsection
 
 @section('javascript')
+    <script>
+        let masterId = '{{ $master_id }}';
+    </script>
     <script src="{{ asset('/assets/administrator/utils/administrator/interior-image.js') }}"></script>
 @endsection
