@@ -21,8 +21,8 @@
                 </ul>
             </li>
             <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="#">Translate</a></li>
+            <li class="mb-3"><a href="/contact">Contact Us</a></li>
+            <li><a id="google_translate_element" class="btn btn-success btn-sm text-black">Translate</a></li>
 
             
             <li><a class="btn btn-success text-black" href="{{url ('/login')}}">login</a></li>

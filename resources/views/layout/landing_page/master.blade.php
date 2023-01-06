@@ -27,6 +27,8 @@
 	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/aos.css')}}">
 	<link rel="stylesheet" href="{{url('/template/property/untree.co-property/css/style.css')}}">
 
+	
+
 	@yield('css')
 
 	<title> @yield('tittle')</title>
@@ -84,6 +86,9 @@
     <script src="{{url('/template/property/untree.co-property/js/navbar.js')}}"></script>
     <script src="{{url('/template/property/untree.co-property/js/counter.js')}}"></script>
     <script src="{{url('/template/property/untree.co-property/js/custom.js')}}"></script>
+
+	{{-- translate --}}
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
 
 	@yield('script')
   </body>
