@@ -1,6 +1,6 @@
 let table = $("#datatable").DataTable({
     ajax: {
-        url: baseUrl("/api/administrator/users" + "-fetch"),
+        url: baseUrl("/api/administrator/miscellaneouse-image-fetch/" + masterId),
         dataSrc: "data",
         type: "POST",
     },
@@ -15,19 +15,11 @@ let table = $("#datatable").DataTable({
     responsive: true,
     columns: [
         {
-            data: "user_nama",
-        },
-        {
-            data: "user_email",
-        },
-        {
-            data: "username",
-        },
-        {
-            data: "user_telp",
+            data: "miscellaneouse_foto_nama",
         },
         {
             data: "created_at",
+            width: "250px",
         },
         {
             data: "id",
@@ -50,7 +42,7 @@ let table = $("#datatable").DataTable({
 
                 return div.outerHTML;
             },
-            width: "180px",
+            width: "150px",
         },
     ],
     createdRow: function (row, data) {
@@ -60,23 +52,15 @@ let table = $("#datatable").DataTable({
 
             // ==> Form
             $('input[name="id"]').val(data.id);
-            $('input[name="nama"]').val(data.user_nama);
-            $('input[name="email"]').val(data.user_email);
-            $('input[name="no_telp"]').val(data.user_telp);
-            $('input[name="username"]').val(data.username);
-            $('input[name="facebook"]').val(data.user_fb);
-            $('input[name="twitter"]').val(data.user_tw);
-            $('input[name="instagram"]').val(data.user_ig);
-            $('input[name="linkedin"]').val(data.user_ln);
-            $('input[name="behance"]').val(data.user_be);
-            $('input[name="jabatan"]').val(data.user_jabatan);
-            $('textarea[name="biodata"]').val(data.user_biodata);
-
+            $('input[name="miscellaneouse_id"]').val(masterId);
+            $('input[name="nama"]').val(data.miscellaneouse_foto_nama);
             $(".image-preview").attr(
                 "src",
-                data.user_img
-                    ? assetsUrl("uploads/foto-profile/" + data.user_img)
-                    : assetsUrl("uploads/foto-profile/no-image.png")
+                data.miscellaneouse_foto_img
+                    ? assetsUrl(
+                          "uploads/miscellaneouse/foto/" + data.miscellaneouse_foto_img
+                      )
+                    : assetsUrl("uploads/miscellaneouse/no-image.png")
             );
 
             $(".message-error").empty();
@@ -102,7 +86,9 @@ let table = $("#datatable").DataTable({
                 if (result.value) {
                     $.LoadingOverlay("show");
                     $.httpRequest({
-                        url: baseUrl("/api/administrator/users/" + data.id),
+                        url: baseUrl(
+                            "/api/administrator/miscellaneouse-image/" + data.id
+                        ),
                         method: "DELETE",
                         response: (res) => {
                             $.LoadingOverlay("hide");
@@ -122,11 +108,8 @@ $(".action-add").click(function () {
     $("#form-data").formReset();
     $(".message-error").empty();
 
-    $(".image-preview").attr(
-        "src",
-        assetsUrl("uploads/foto-profile/no-image.png")
-    );
-
+    $('input[name="miscellaneouse_id"]').val(masterId);
+    $(".image-preview").attr("src", assetsUrl("uploads/miscellaneouse/no-image.png"));
     $("#modal-form").modal("show");
 });
 
@@ -150,6 +133,7 @@ $("#form-data").formSubmit((response) => {
     if (response.statusCode == 200) {
         $("#form-data").formReset();
         $("#modal-form").modal("hide");
+
         Swal.fire("Success", response.message, "success");
         table.ajax.reload();
     }

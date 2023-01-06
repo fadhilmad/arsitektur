@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Administrator\DashboardController;
 use App\Http\Controllers\Administrator\InteriorController;
+use App\Http\Controllers\Administrator\MiscellaneouseController;
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -31,8 +32,14 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/users', [UsersController::class, 'index'])->name('users');
+    
+    // Interior
     Route::get('/projeck-interior', [InteriorController::class, 'index'])->name('interior');
     Route::get('/projeck-interior-image/{id}', [InteriorController::class, 'image'])->name('image_interior');
+
+    // Miscellaneouse
+    Route::get('/projeck-miscellaneouse', [MiscellaneouseController::class, 'index'])->name('miscellaneouse');
+    Route::get('/projeck-miscellaneouse-image/{id}', [MiscellaneouseController::class, 'image'])->name('image_miscellaneouse');
 });
 
 /*
@@ -57,10 +64,22 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
     Route::delete('/interior/{id}', [InteriorController::class, 'destroy']);
 
     // Image Interior
-    Route::post('/interior-image-fetch/{id}', [InteriorController::class, 'image_fetch']);
-    Route::post('/interior-image', [InteriorController::class, 'image_store']);
-    Route::post('/interior-image/{id}', [InteriorController::class, 'image_update']);
-    Route::delete('/interior-image/{id}', [InteriorController::class, 'image_destroy']);
+    Route::post('/interior-image-fetch/{id}', [InteriorController::class, 'imageFetch']);
+    Route::post('/interior-image', [InteriorController::class, 'imageStore']);
+    Route::post('/interior-image/{id}', [InteriorController::class, 'imageUpdate']);
+    Route::delete('/interior-image/{id}', [InteriorController::class, 'imageDestroy']);
+
+    // Miscellaneouse
+    Route::post('/miscellaneouse-fetch', [MiscellaneouseController::class, 'fetch']);
+    Route::post('/miscellaneouse', [MiscellaneouseController::class, 'store']);
+    Route::post('/miscellaneouse/{id}', [MiscellaneouseController::class, 'update']);
+    Route::delete('/miscellaneouse/{id}', [MiscellaneouseController::class, 'destroy']);
+
+    // Image Miscellaneouse
+    Route::post('/miscellaneouse-image-fetch/{id}', [MiscellaneouseController::class, 'imageFetch']);
+    Route::post('/miscellaneouse-image', [MiscellaneouseController::class, 'imageStore']);
+    Route::post('/miscellaneouse-image/{id}', [MiscellaneouseController::class, 'imageUpdate']);
+    Route::delete('/miscellaneouse-image/{id}', [MiscellaneouseController::class, 'imageDestroy']);
 });
 
 /*

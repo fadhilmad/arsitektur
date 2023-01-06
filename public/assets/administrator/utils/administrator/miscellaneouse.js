@@ -1,6 +1,6 @@
 let table = $("#datatable").DataTable({
     ajax: {
-        url: baseUrl("/api/administrator/users" + "-fetch"),
+        url: baseUrl("/api/administrator/miscellaneouse" + "-fetch"),
         dataSrc: "data",
         type: "POST",
     },
@@ -15,26 +15,39 @@ let table = $("#datatable").DataTable({
     responsive: true,
     columns: [
         {
+            data: "miscellaneouse_nama",
+            name: "mi.miscellaneouse_nama",
+            width: "250px",
+        },
+        {
+            data: "miscellaneouse_video_link",
+            name: "mi.miscellaneouse_video_link",
+        },
+        {
+            data: "foto_count",
+        },
+        {
             data: "user_nama",
-        },
-        {
-            data: "user_email",
-        },
-        {
-            data: "username",
-        },
-        {
-            data: "user_telp",
+            name: "us.user_nama",
+            width: "150px",
         },
         {
             data: "created_at",
+            name: "mi.created_at",
         },
         {
             data: "id",
+            name: "mi.id",
             render: function (data, i, row) {
                 // ==> Container
                 var div = document.createElement("div");
                 div.className = "row-action";
+
+                // ==> Button Foto
+                var btn = document.createElement("button");
+                btn.className = "btn btn-info btn-icon btn-sm action-detail";
+                btn.innerHTML = '<i class="fa fa-list mr-1"></i>';
+                div.append(btn);
 
                 // ==> Button Edit
                 var btn = document.createElement("button");
@@ -50,33 +63,35 @@ let table = $("#datatable").DataTable({
 
                 return div.outerHTML;
             },
-            width: "180px",
+            width: "150px",
         },
     ],
     createdRow: function (row, data) {
+        // ==> Detail Button
+        $(".action-detail", row).click(function (e) {
+            e.preventDefault();
+            window.location.replace(
+                baseUrl("/administrator/projeck-miscellaneouse-image/" + data.id)
+            );
+        });
+
         // ==> Edit Button
         $(".action-edit", row).click(function (e) {
             e.preventDefault();
 
             // ==> Form
             $('input[name="id"]').val(data.id);
-            $('input[name="nama"]').val(data.user_nama);
-            $('input[name="email"]').val(data.user_email);
-            $('input[name="no_telp"]').val(data.user_telp);
-            $('input[name="username"]').val(data.username);
-            $('input[name="facebook"]').val(data.user_fb);
-            $('input[name="twitter"]').val(data.user_tw);
-            $('input[name="instagram"]').val(data.user_ig);
-            $('input[name="linkedin"]').val(data.user_ln);
-            $('input[name="behance"]').val(data.user_be);
-            $('input[name="jabatan"]').val(data.user_jabatan);
-            $('textarea[name="biodata"]').val(data.user_biodata);
-
+            $('input[name="nama"]').val(data.miscellaneouse_nama);
+            $('input[name="video_link"]').val(data.miscellaneouse_video_link);
+            $('textarea[name="deskripsi"]').summernote(
+                "code",
+                data.miscellaneouse_deskripsi
+            );
             $(".image-preview").attr(
                 "src",
-                data.user_img
-                    ? assetsUrl("uploads/foto-profile/" + data.user_img)
-                    : assetsUrl("uploads/foto-profile/no-image.png")
+                data.miscellaneouse_thumbnail
+                    ? assetsUrl("uploads/miscellaneouse/" + data.miscellaneouse_thumbnail)
+                    : assetsUrl("uploads/miscellaneouse/no-image.png")
             );
 
             $(".message-error").empty();
@@ -102,7 +117,7 @@ let table = $("#datatable").DataTable({
                 if (result.value) {
                     $.LoadingOverlay("show");
                     $.httpRequest({
-                        url: baseUrl("/api/administrator/users/" + data.id),
+                        url: baseUrl("/api/administrator/miscellaneouse/" + data.id),
                         method: "DELETE",
                         response: (res) => {
                             $.LoadingOverlay("hide");
@@ -122,11 +137,8 @@ $(".action-add").click(function () {
     $("#form-data").formReset();
     $(".message-error").empty();
 
-    $(".image-preview").attr(
-        "src",
-        assetsUrl("uploads/foto-profile/no-image.png")
-    );
-
+    $(".image-preview").attr("src", assetsUrl("uploads/miscellaneouse/no-image.png"));
+    $('textarea[name="deskripsi"]').summernote("code", "");
     $("#modal-form").modal("show");
 });
 
@@ -153,4 +165,17 @@ $("#form-data").formSubmit((response) => {
         Swal.fire("Success", response.message, "success");
         table.ajax.reload();
     }
+});
+
+$('textarea[name="deskripsi"]').summernote({
+    height: 200,
+    toolbar: [
+        ["font", ["bold", "italic", "underline", "clear"]],
+        ["fontname", ["fontname"]],
+        ["fontsize", ["fontsize"]],
+        ["color", ["color"]],
+        ["para", ["ol", "ul", "paragraph"]],
+        ["insert", ["link"]],
+        ["view", ["undo", "redo", "fullscreen", "codeview", "help"]],
+    ],
 });
