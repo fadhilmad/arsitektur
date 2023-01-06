@@ -60,6 +60,8 @@ class UsersController extends Controller
             'user_fb' => $request->input('facebook'),
             'user_tw' => $request->input('twitter'),
             'user_ig' => $request->input('instagram'),
+            'user_ln' => $request->input('linkedin'),
+            'user_be' => $request->input('behance'),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => null
         ];
@@ -117,6 +119,8 @@ class UsersController extends Controller
             'user_fb' => $request->input('facebook'),
             'user_tw' => $request->input('twitter'),
             'user_ig' => $request->input('instagram'),
+            'user_ln' => $request->input('linkedin'),
+            'user_be' => $request->input('behance'),
             'updated_at' => date('Y-m-d H:i:s')
         ];
 

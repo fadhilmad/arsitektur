@@ -129,7 +129,21 @@
                                     <small class="message-error text-danger" data-target="instagram_error"></small>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="linkedin">LinkedIn</label>
+                                    <input type="text" class="form-control" name="linkedin" id="linkedin">
+                                    <small class="message-error text-danger" data-target="linkedin_error"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="behance">Behance</label>
+                                    <input type="text" class="form-control" name="behance" id="behance">
+                                    <small class="message-error text-danger" data-target="behance_error"></small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="jabatan">Jabatan</label>
                                     <input type="text" class="form-control" name="jabatan" id="jabatan">

@@ -67,6 +67,8 @@ let table = $("#datatable").DataTable({
             $('input[name="facebook"]').val(data.user_fb);
             $('input[name="twitter"]').val(data.user_tw);
             $('input[name="instagram"]').val(data.user_ig);
+            $('input[name="linkedin"]').val(data.user_ln);
+            $('input[name="behance"]').val(data.user_be);
             $('input[name="jabatan"]').val(data.user_jabatan);
             $('textarea[name="biodata"]').val(data.user_biodata);
 

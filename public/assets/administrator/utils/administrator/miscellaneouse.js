@@ -1,6 +1,6 @@
 let table = $("#datatable").DataTable({
     ajax: {
-        url: baseUrl("/api/administrator/interior" + "-fetch"),
+        url: baseUrl("/api/administrator/miscellaneouse" + "-fetch"),
         dataSrc: "data",
         type: "POST",
     },
@@ -15,24 +15,24 @@ let table = $("#datatable").DataTable({
     responsive: true,
     columns: [
         {
-            data: "interior_nama",
-            name: "in.interior_nama",
+            data: "miscellaneouse_nama",
+            name: "mi.miscellaneouse_nama",
             width: "250px",
         },
         {
-            data: "interior_video_link",
-            name: "in.interior_video_link",
+            data: "miscellaneouse_video_link",
+            name: "mi.miscellaneouse_video_link",
         },
         {
             data: "foto_count",
         },
         {
             data: "created_at",
-            name: "in.created_at",
+            name: "mi.created_at",
         },
         {
             data: "id",
-            name: "in.id",
+            name: "mi.id",
             render: function (data, i, row) {
                 // ==> Container
                 var div = document.createElement("div");
@@ -66,7 +66,7 @@ let table = $("#datatable").DataTable({
         $(".action-detail", row).click(function (e) {
             e.preventDefault();
             window.location.replace(
-                baseUrl("/administrator/projeck-interior-image/" + data.id)
+                baseUrl("/administrator/projeck-miscellaneouse-image/" + data.id)
             );
         });
 
@@ -76,17 +76,17 @@ let table = $("#datatable").DataTable({
 
             // ==> Form
             $('input[name="id"]').val(data.id);
-            $('input[name="nama"]').val(data.interior_nama);
-            $('input[name="video_link"]').val(data.interior_video_link);
+            $('input[name="nama"]').val(data.miscellaneouse_nama);
+            $('input[name="video_link"]').val(data.miscellaneouse_video_link);
             $('textarea[name="deskripsi"]').summernote(
                 "code",
-                data.interior_deskripsi
+                data.miscellaneouse_deskripsi
             );
             $(".image-preview").attr(
                 "src",
-                data.interior_thumbnail
-                    ? assetsUrl("uploads/interior/" + data.interior_thumbnail)
-                    : assetsUrl("uploads/interior/no-image.png")
+                data.miscellaneouse_thumbnail
+                    ? assetsUrl("uploads/miscellaneouse/" + data.miscellaneouse_thumbnail)
+                    : assetsUrl("uploads/miscellaneouse/no-image.png")
             );
 
             $(".message-error").empty();
@@ -112,7 +112,7 @@ let table = $("#datatable").DataTable({
                 if (result.value) {
                     $.LoadingOverlay("show");
                     $.httpRequest({
-                        url: baseUrl("/api/administrator/interior/" + data.id),
+                        url: baseUrl("/api/administrator/miscellaneouse/" + data.id),
                         method: "DELETE",
                         response: (res) => {
                             $.LoadingOverlay("hide");
@@ -132,7 +132,7 @@ $(".action-add").click(function () {
     $("#form-data").formReset();
     $(".message-error").empty();
 
-    $(".image-preview").attr("src", assetsUrl("uploads/interior/no-image.png"));
+    $(".image-preview").attr("src", assetsUrl("uploads/miscellaneouse/no-image.png"));
     $('textarea[name="deskripsi"]').summernote("code", "");
     $("#modal-form").modal("show");
 });

@@ -23,6 +23,8 @@ class UsersModel extends Model
         'user_fb',
         'user_tw',
         'user_ig',
+        'user_ln',
+        'user_be',
         'created_at',
         'updated_at'
     ];

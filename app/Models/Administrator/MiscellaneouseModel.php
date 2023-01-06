@@ -6,45 +6,45 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class InteriorModel extends Model
+class MiscellaneouseModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'interior';
+    protected $table = 'miscellaneouse';
 
     protected $fillable = [
-        'interior_nama',
-        'interior_thumbnail',
-        'interior_deskripsi',
-        'interior_video_link',
-        'interior_meta_keyword',
-        'interior_meta_deskripsi',
+        'miscellaneouse_nama',
+        'miscellaneouse_thumbnail',
+        'miscellaneouse_deskripsi',
+        'miscellaneouse_video_link',
+        'miscellaneouse_meta_keyword',
+        'miscellaneouse_meta_deskripsi',
         'created_at',
         'updated_at'
     ];
 
-    public static function countFotoInterior($id)
+    public static function countFotoMiscellaneouse($id)
     {
-        return DB::table('interior_foto')
-            ->where('interior_id', $id)
+        return DB::table('miscellaneouse_foto')
+            ->where('miscellaneouse_id', $id)
             ->count();
     }
 
     public static function saveImage($data, $id = "")
     {
         if ($id) {
-            return DB::table('interior_foto')
+            return DB::table('miscellaneouse_foto')
                 ->where('id', $id)
                 ->update($data);
         } else {
-            return DB::table('interior_foto')
+            return DB::table('miscellaneouse_foto')
                 ->insert($data);
         }
     }
 
     public static function deleteImage($id)
     {
-        return DB::table('interior_foto')
+        return DB::table('miscellaneouse_foto')
             ->where('id', $id)
             ->delete();
     }

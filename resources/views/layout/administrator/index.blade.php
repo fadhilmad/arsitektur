@@ -20,6 +20,8 @@
     <link href="{{ asset('assets/administrator/css/paper-dashboard.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/plugins/toastr.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/vendor/summernote/summernote.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/vendor/select2/select2.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/vendor/select2/select2-bootstrap4.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/demo/demo.css') }}" rel="stylesheet" />
     @yield('css')
@@ -78,12 +80,15 @@
     <script src="{{ asset('/assets/administrator/js/plugins/toastr.min.js') }}"></script>
     <script src="{{ asset('/assets/administrator/js/plugins/fecth-api.min.js') }}"></script>
     <script src="{{ asset('assets/administrator/vendor/summernote/summernote.min.js') }}"></script>
+    <script src="{{ asset('assets/administrator/vendor/select2/select2.min.js') }}"></script>
 
     <!-- Chart JS -->
     <script src="{{asset('/assets/administrator/js/plugins/chartjs.min.js')}}"></script>
     <script src="{{asset('/assets/administrator/js/paper-dashboard.min.js')}}"></script>
     <script src="{{asset('/assets/administrator/demo/demo.js')}}"></script>
     <script>
+        $.fn.select2.defaults.set("theme", "bootstrap4");
+        
         let baseUrl = (url) => {
             return `{{ url('/') }}${url}`;
         }

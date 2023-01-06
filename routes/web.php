@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\Administrator\ArchitectureController;
 use App\Http\Controllers\Administrator\DashboardController;
 use App\Http\Controllers\Administrator\InteriorController;
+use App\Http\Controllers\Administrator\MasterData\KategoriArchitectureController;
+use App\Http\Controllers\Administrator\MiscellaneouseController;
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UtilsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,12 +31,24 @@ Route::get('/', function () {
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/debug', [UtilsController::class, 'debug'])->name('debug');
 
 Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('/datamaster/kategori-architecture', [KategoriArchitectureController::class, 'index'])->name('kategori_arsitektur');
+
+    // Interior
     Route::get('/projeck-interior', [InteriorController::class, 'index'])->name('interior');
     Route::get('/projeck-interior-image/{id}', [InteriorController::class, 'image'])->name('image_interior');
+
+    // Miscellaneouse
+    Route::get('/projeck-miscellaneouse', [MiscellaneouseController::class, 'index'])->name('miscellaneouse');
+    Route::get('/projeck-miscellaneouse-image/{id}', [MiscellaneouseController::class, 'image'])->name('image_miscellaneouse');
+
+    // Architecture
+    Route::get('/projeck-architecture', [ArchitectureController::class, 'index'])->name('architecture');
+    Route::get('/projeck-architecture-image/{id}', [ArchitectureController::class, 'image'])->name('image_architecture');
 });
 
 /*
@@ -41,6 +57,7 @@ Route::prefix('/administrator')->middleware('auth')->group(function () {
 
 Route::prefix('/api')->group(function () {
     Route::post('/auth', [LoginController::class, 'auth']);
+    Route::get('/utils/kategori-architecture', [UtilsController::class, 'getKategoriArchitecture']);
 });
 
 Route::prefix('/api/administrator')->middleware('auth')->group(function () {
@@ -57,10 +74,40 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
     Route::delete('/interior/{id}', [InteriorController::class, 'destroy']);
 
     // Image Interior
-    Route::post('/interior-image-fetch/{id}', [InteriorController::class, 'image_fetch']);
-    Route::post('/interior-image', [InteriorController::class, 'image_store']);
-    Route::post('/interior-image/{id}', [InteriorController::class, 'image_update']);
-    Route::delete('/interior-image/{id}', [InteriorController::class, 'image_destroy']);
+    Route::post('/interior-image-fetch/{id}', [InteriorController::class, 'imageFetch']);
+    Route::post('/interior-image', [InteriorController::class, 'imageStore']);
+    Route::post('/interior-image/{id}', [InteriorController::class, 'imageUpdate']);
+    Route::delete('/interior-image/{id}', [InteriorController::class, 'imageDestroy']);
+
+    // Miscellaneouse
+    Route::post('/miscellaneouse-fetch', [MiscellaneouseController::class, 'fetch']);
+    Route::post('/miscellaneouse', [MiscellaneouseController::class, 'store']);
+    Route::post('/miscellaneouse/{id}', [MiscellaneouseController::class, 'update']);
+    Route::delete('/miscellaneouse/{id}', [MiscellaneouseController::class, 'destroy']);
+
+    // Image Miscellaneouse
+    Route::post('/miscellaneouse-image-fetch/{id}', [MiscellaneouseController::class, 'imageFetch']);
+    Route::post('/miscellaneouse-image', [MiscellaneouseController::class, 'imageStore']);
+    Route::post('/miscellaneouse-image/{id}', [MiscellaneouseController::class, 'imageUpdate']);
+    Route::delete('/miscellaneouse-image/{id}', [MiscellaneouseController::class, 'imageDestroy']);
+
+    // Architecture
+    Route::post('/architecture-fetch', [ArchitectureController::class, 'fetch']);
+    Route::post('/architecture', [ArchitectureController::class, 'store']);
+    Route::post('/architecture/{id}', [ArchitectureController::class, 'update']);
+    Route::delete('/architecture/{id}', [ArchitectureController::class, 'destroy']);
+
+    // Image Architecture
+    Route::post('/architecture-image-fetch/{id}', [ArchitectureController::class, 'imageFetch']);
+    Route::post('/architecture-image', [ArchitectureController::class, 'imageStore']);
+    Route::post('/architecture-image/{id}', [ArchitectureController::class, 'imageUpdate']);
+    Route::delete('/architecture-image/{id}', [ArchitectureController::class, 'imageDestroy']);
+
+    // Master Architecture
+    Route::post('/datamaster/kategori-architecture-fetch', [KategoriArchitectureController::class, 'fetch']);
+    Route::post('/datamaster/kategori-architecture', [KategoriArchitectureController::class, 'store']);
+    Route::post('/datamaster/kategori-architecture/{id}', [KategoriArchitectureController::class, 'update']);
+    Route::delete('/datamaster/kategori-architecture/{id}', [KategoriArchitectureController::class, 'destroy']);
 });
 
 /*

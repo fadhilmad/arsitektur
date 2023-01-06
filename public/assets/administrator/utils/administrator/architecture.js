@@ -1,6 +1,9 @@
 let table = $("#datatable").DataTable({
     ajax: {
-        url: baseUrl("/api/administrator/interior" + "-fetch"),
+        url: baseUrl("/api/administrator/architecture" + "-fetch"),
+        data: (e) => {
+            e.kategori_architecture = $("#kategori-architecture-filter").val();
+        },
         dataSrc: "data",
         type: "POST",
     },
@@ -15,24 +18,29 @@ let table = $("#datatable").DataTable({
     responsive: true,
     columns: [
         {
-            data: "interior_nama",
-            name: "in.interior_nama",
+            data: "architecture_nama",
+            name: "ar.architecture_nama",
             width: "250px",
         },
         {
-            data: "interior_video_link",
-            name: "in.interior_video_link",
+            data: "architecture_kategori_nama",
+            name: "ak.architecture_kategori_nama",
+            width: "250px",
+        },
+        {
+            data: "architecture_video_link",
+            name: "ar.architecture_video_link",
         },
         {
             data: "foto_count",
         },
         {
             data: "created_at",
-            name: "in.created_at",
+            name: "ar.created_at",
         },
         {
             data: "id",
-            name: "in.id",
+            name: "ar.id",
             render: function (data, i, row) {
                 // ==> Container
                 var div = document.createElement("div");
@@ -66,7 +74,7 @@ let table = $("#datatable").DataTable({
         $(".action-detail", row).click(function (e) {
             e.preventDefault();
             window.location.replace(
-                baseUrl("/administrator/projeck-interior-image/" + data.id)
+                baseUrl("/administrator/projeck-architecture-image/" + data.id)
             );
         });
 
@@ -76,17 +84,22 @@ let table = $("#datatable").DataTable({
 
             // ==> Form
             $('input[name="id"]').val(data.id);
-            $('input[name="nama"]').val(data.interior_nama);
-            $('input[name="video_link"]').val(data.interior_video_link);
+            $("#kategori-architecture")
+                .val(data.architecture_kategori_id)
+                .trigger("change");
+            $('input[name="nama"]').val(data.architecture_nama);
+            $('input[name="video_link"]').val(data.architecture_video_link);
             $('textarea[name="deskripsi"]').summernote(
                 "code",
-                data.interior_deskripsi
+                data.architecture_deskripsi
             );
             $(".image-preview").attr(
                 "src",
-                data.interior_thumbnail
-                    ? assetsUrl("uploads/interior/" + data.interior_thumbnail)
-                    : assetsUrl("uploads/interior/no-image.png")
+                data.architecture_thumbnail
+                    ? assetsUrl(
+                          "uploads/architecture/" + data.architecture_thumbnail
+                      )
+                    : assetsUrl("uploads/architecture/no-image.png")
             );
 
             $(".message-error").empty();
@@ -112,7 +125,9 @@ let table = $("#datatable").DataTable({
                 if (result.value) {
                     $.LoadingOverlay("show");
                     $.httpRequest({
-                        url: baseUrl("/api/administrator/interior/" + data.id),
+                        url: baseUrl(
+                            "/api/administrator/architecture/" + data.id
+                        ),
                         method: "DELETE",
                         response: (res) => {
                             $.LoadingOverlay("hide");
@@ -132,7 +147,11 @@ $(".action-add").click(function () {
     $("#form-data").formReset();
     $(".message-error").empty();
 
-    $(".image-preview").attr("src", assetsUrl("uploads/interior/no-image.png"));
+    $(".image-preview").attr(
+        "src",
+        assetsUrl("uploads/architecture/no-image.png")
+    );
+    $("#kategori-architecture").val("").trigger("change");
     $('textarea[name="deskripsi"]').summernote("code", "");
     $("#modal-form").modal("show");
 });
@@ -173,4 +192,19 @@ $('textarea[name="deskripsi"]').summernote({
         ["insert", ["link"]],
         ["view", ["undo", "redo", "fullscreen", "codeview", "help"]],
     ],
+});
+
+// ==> Select 2
+$("#kategori-architecture-filter").select2Ajax({
+    url: baseUrl("/api/utils/kategori-architecture"),
+    width: "100%",
+});
+
+$("#kategori-architecture").select2Ajax({
+    url: baseUrl("/api/utils/kategori-architecture"),
+    width: "100%",
+});
+
+$("#kategori-architecture-filter").change(function () {
+    table.ajax.reload();
 });

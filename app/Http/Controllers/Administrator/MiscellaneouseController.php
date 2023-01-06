@@ -4,15 +4,15 @@ namespace App\Http\Controllers\Administrator;
 
 use App\Http\Controllers\Controller;
 use App\Http\Libraries\System;
-use App\Models\Administrator\InteriorModel;
+use App\Models\Administrator\MiscellaneouseModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
 
-class InteriorController extends Controller
+class MiscellaneouseController extends Controller
 {
-    private $fileDirUpload = "interior";
+    private $fileDirUpload = "miscellaneouse";
     private $system;
 
     public function __construct()
@@ -22,29 +22,29 @@ class InteriorController extends Controller
 
     public function index()
     {
-        return view('administrator.interior.index');
+        return view('administrator.miscellaneouse.index');
     }
 
     public function fetch()
     {
-        $DB = DB::table('interior as in')
+        $DB = DB::table('miscellaneouse as mi')
             ->select([
-                'in.id',
-                'in.interior_nama',
-                'in.interior_thumbnail',
-                'in.interior_deskripsi',
-                'in.interior_video_link',
-                'in.interior_meta_keyword',
-                'in.interior_meta_deskripsi',
-                'in.created_at',
-                'in.updated_at',
+                'mi.id',
+                'mi.miscellaneouse_nama',
+                'mi.miscellaneouse_thumbnail',
+                'mi.miscellaneouse_deskripsi',
+                'mi.miscellaneouse_video_link',
+                'mi.miscellaneouse_meta_keyword',
+                'mi.miscellaneouse_meta_deskripsi',
+                'mi.created_at',
+                'mi.updated_at',
             ]);
 
         return DataTables::of($DB)
             ->addColumn('foto_count', function ($row) {
-                return InteriorModel::countFotoInterior($row->id);
+                return MiscellaneouseModel::countFotoMiscellaneouse($row->id);
             })
-            ->rawColumns(['interior_deskripsi'])
+            ->rawColumns(['miscellaneouse_deskripsi'])
             ->toJson(JSON_PRETTY_PRINT);
     }
 
@@ -61,12 +61,11 @@ class InteriorController extends Controller
 
         // ==> Data Insert
         $data = [
-            'interior_nama' => $request->input('nama'),
-            'interior_deskripsi' => $request->input('deskripsi'),
-            'interior_video_link' => $request->input('video_link'),
-            'interior_meta_keyword' => strtolower($request->input('nama')),
-            'interior_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
-            'created_at' => date('Y-m-d H:i:s')
+            'miscellaneouse_nama' => $request->input('nama'),
+            'miscellaneouse_deskripsi' => $request->input('deskripsi'),
+            'miscellaneouse_video_link' => $request->input('video_link'),
+            'miscellaneouse_meta_keyword' => strtolower($request->input('nama')),
+            'miscellaneouse_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
         ];
 
         // ==> File Upload
@@ -76,11 +75,11 @@ class InteriorController extends Controller
                 'uploads'
             );
 
-            $data['interior_thumbnail'] = str_replace($this->fileDirUpload . '/', '', $path);
+            $data['miscellaneouse_thumbnail'] = str_replace($this->fileDirUpload . '/', '', $path);
         }
 
         // ==> Insert Data
-        $i = InteriorModel::create($data);
+        $i = MiscellaneouseModel::create($data);
         if (!$i) return $this->system->responseServer(500, [
             'statusCode' => 500,
             'message' => 'Terjadi kesalahan saat insert data'
@@ -105,12 +104,11 @@ class InteriorController extends Controller
 
         // ==> Data Insert
         $data = [
-            'interior_nama' => $request->input('nama'),
-            'interior_deskripsi' => $request->input('deskripsi'),
-            'interior_video_link' => $request->input('video_link'),
-            'interior_meta_keyword' => strtolower($request->input('nama')),
-            'interior_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
-            'updated_at' => date('Y-m-d H:i:s')
+            'miscellaneouse_nama' => $request->input('nama'),
+            'miscellaneouse_deskripsi' => $request->input('deskripsi'),
+            'miscellaneouse_video_link' => $request->input('video_link'),
+            'miscellaneouse_meta_keyword' => strtolower($request->input('nama')),
+            'miscellaneouse_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
         ];
 
         // ==> File Upload
@@ -120,11 +118,11 @@ class InteriorController extends Controller
                 'uploads'
             );
 
-            $data['interior_thumbnail'] = str_replace($this->fileDirUpload . '/', '', $path);
+            $data['miscellaneouse_thumbnail'] = str_replace($this->fileDirUpload . '/', '', $path);
         }
 
         // ==> Insert Data
-        $i = InteriorModel::where('id', $id)->update($data);
+        $i = MiscellaneouseModel::where('id', $id)->update($data);
         if (!$i) return $this->system->responseServer(500, [
             'statusCode' => 500,
             'message' => 'Terjadi kesalahan saat update data'
@@ -138,7 +136,7 @@ class InteriorController extends Controller
 
     public function destroy($id)
     {
-        $i = InteriorModel::where('id', $id)->delete();
+        $i = MiscellaneouseModel::where('id', $id)->delete();
 
         if (!$i) return $this->system->responseServer(500, [
             'statusCode' => 500,
@@ -153,13 +151,13 @@ class InteriorController extends Controller
 
     public function image($id)
     {
-        return view('administrator.interior.image', ['master_id' => $id]);
+        return view('administrator.miscellaneouse.image', ['master_id' => $id]);
     }
 
     public function imageFetch($id)
     {
-        $DB = DB::table('interior_foto')
-            ->where('interior_id', $id);
+        $DB = DB::table('miscellaneouse_foto')
+            ->where('miscellaneouse_id', $id);
 
         return DataTables::of($DB)
             ->toJson(JSON_PRETTY_PRINT);
@@ -176,8 +174,8 @@ class InteriorController extends Controller
 
         // ==> Data Insert
         $data = [
-            'interior_id' => $request->input('interior_id'),
-            'interior_foto_nama' => $request->input('nama'),
+            'miscellaneouse_id' => $request->input('miscellaneouse_id'),
+            'miscellaneouse_foto_nama' => $request->input('nama'),
             'created_at' => date('Y-m-d H:i:s')
         ];
 
@@ -188,11 +186,11 @@ class InteriorController extends Controller
                 'uploads'
             );
 
-            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/foto/', '', $path);
+            $data['miscellaneouse_foto_img'] = str_replace($this->fileDirUpload . '/foto/', '', $path);
         }
 
         // ==> Insert Data
-        $i = InteriorModel::saveImage($data);
+        $i = MiscellaneouseModel::saveImage($data);
         if (!$i) return $this->system->responseServer(500, [
             'statusCode' => 500,
             'message' => 'Terjadi kesalahan saat insert data'
@@ -215,8 +213,8 @@ class InteriorController extends Controller
 
         // ==> Data Insert
         $data = [
-            'interior_id' => $request->input('interior_id'),
-            'interior_foto_nama' => $request->input('nama'),
+            'miscellaneouse_id' => $request->input('miscellaneouse_id'),
+            'miscellaneouse_foto_nama' => $request->input('nama'),
             'updated_at' => date('Y-m-d H:i:s')
         ];
 
@@ -227,11 +225,11 @@ class InteriorController extends Controller
                 'uploads'
             );
 
-            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/foto/', '', $path);
+            $data['miscellaneouse_foto_img'] = str_replace($this->fileDirUpload . '/foto/', '', $path);
         }
 
         // ==> Insert Data
-        $i = InteriorModel::saveImage($data, $id);
+        $i = MiscellaneouseModel::saveImage($data, $id);
         if (!$i) return $this->system->responseServer(500, [
             'statusCode' => 500,
             'message' => 'Terjadi kesalahan saat update data'
@@ -245,7 +243,7 @@ class InteriorController extends Controller
 
     public function imageDestroy($id)
     {
-        $i = InteriorModel::deleteImage($id);
+        $i = MiscellaneouseModel::deleteImage($id);
 
         if (!$i) return $this->system->responseServer(500, [
             'statusCode' => 500,
