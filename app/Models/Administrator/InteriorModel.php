@@ -19,7 +19,6 @@ class InteriorModel extends Model
         'interior_video_link',
         'interior_meta_keyword',
         'interior_meta_deskripsi',
-        'interior_author',
         'created_at',
         'updated_at'
     ];

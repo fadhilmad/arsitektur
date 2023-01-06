@@ -1,6 +1,6 @@
 let table = $("#datatable").DataTable({
     ajax: {
-        url: baseUrl("/api/administrator/interior" + "-fetch"),
+        url: baseUrl("/api/administrator/architecture-image-fetch/" + masterId),
         dataSrc: "data",
         type: "POST",
     },
@@ -15,34 +15,18 @@ let table = $("#datatable").DataTable({
     responsive: true,
     columns: [
         {
-            data: "interior_nama",
-            name: "in.interior_nama",
-            width: "250px",
-        },
-        {
-            data: "interior_video_link",
-            name: "in.interior_video_link",
-        },
-        {
-            data: "foto_count",
+            data: "architecture_foto_nama",
         },
         {
             data: "created_at",
-            name: "in.created_at",
+            width: "250px",
         },
         {
             data: "id",
-            name: "in.id",
             render: function (data, i, row) {
                 // ==> Container
                 var div = document.createElement("div");
                 div.className = "row-action";
-
-                // ==> Button Foto
-                var btn = document.createElement("button");
-                btn.className = "btn btn-info btn-icon btn-sm action-detail";
-                btn.innerHTML = '<i class="fa fa-list mr-1"></i>';
-                div.append(btn);
 
                 // ==> Button Edit
                 var btn = document.createElement("button");
@@ -62,31 +46,21 @@ let table = $("#datatable").DataTable({
         },
     ],
     createdRow: function (row, data) {
-        // ==> Detail Button
-        $(".action-detail", row).click(function (e) {
-            e.preventDefault();
-            window.location.replace(
-                baseUrl("/administrator/projeck-interior-image/" + data.id)
-            );
-        });
-
         // ==> Edit Button
         $(".action-edit", row).click(function (e) {
             e.preventDefault();
 
             // ==> Form
             $('input[name="id"]').val(data.id);
-            $('input[name="nama"]').val(data.interior_nama);
-            $('input[name="video_link"]').val(data.interior_video_link);
-            $('textarea[name="deskripsi"]').summernote(
-                "code",
-                data.interior_deskripsi
-            );
+            $('input[name="architecture_id"]').val(masterId);
+            $('input[name="nama"]').val(data.architecture_foto_nama);
             $(".image-preview").attr(
                 "src",
-                data.interior_thumbnail
-                    ? assetsUrl("uploads/interior/" + data.interior_thumbnail)
-                    : assetsUrl("uploads/interior/no-image.png")
+                data.architecture_foto_img
+                    ? assetsUrl(
+                          "uploads/architecture/foto/" + data.architecture_foto_img
+                      )
+                    : assetsUrl("uploads/architecture/no-image.png")
             );
 
             $(".message-error").empty();
@@ -112,7 +86,9 @@ let table = $("#datatable").DataTable({
                 if (result.value) {
                     $.LoadingOverlay("show");
                     $.httpRequest({
-                        url: baseUrl("/api/administrator/interior/" + data.id),
+                        url: baseUrl(
+                            "/api/administrator/architecture-image/" + data.id
+                        ),
                         method: "DELETE",
                         response: (res) => {
                             $.LoadingOverlay("hide");
@@ -132,8 +108,8 @@ $(".action-add").click(function () {
     $("#form-data").formReset();
     $(".message-error").empty();
 
-    $(".image-preview").attr("src", assetsUrl("uploads/interior/no-image.png"));
-    $('textarea[name="deskripsi"]').summernote("code", "");
+    $('input[name="architecture_id"]').val(masterId);
+    $(".image-preview").attr("src", assetsUrl("uploads/architecture/no-image.png"));
     $("#modal-form").modal("show");
 });
 
@@ -157,20 +133,8 @@ $("#form-data").formSubmit((response) => {
     if (response.statusCode == 200) {
         $("#form-data").formReset();
         $("#modal-form").modal("hide");
+
         Swal.fire("Success", response.message, "success");
         table.ajax.reload();
     }
-});
-
-$('textarea[name="deskripsi"]').summernote({
-    height: 200,
-    toolbar: [
-        ["font", ["bold", "italic", "underline", "clear"]],
-        ["fontname", ["fontname"]],
-        ["fontsize", ["fontsize"]],
-        ["color", ["color"]],
-        ["para", ["ol", "ul", "paragraph"]],
-        ["insert", ["link"]],
-        ["view", ["undo", "redo", "fullscreen", "codeview", "help"]],
-    ],
 });

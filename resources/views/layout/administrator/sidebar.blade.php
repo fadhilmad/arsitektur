@@ -16,7 +16,7 @@
             <div class="collapse show" id="projeck">
                 <ul class="nav">
                     <li>
-                        <a href="{{ url('/administrator/projeck-arsitektur') }}">
+                        <a href="{{ url('/administrator/projeck-architecture') }}">
                             <span class="sidebar-mini-icon nc-icon nc-ruler-pencil"></span>
                             <span class="sidebar-normal">Projek Arsitektur</span>
                         </a>
@@ -94,7 +94,7 @@
             <div class="collapse show" id="master-data">
                 <ul class="nav">
                     <li>
-                        <a href="{{ url('/administrator/kategori-arsitektur') }}">
+                        <a href="{{ url('/administrator/datamaster/kategori-architecture') }}">
                             <span class="sidebar-mini-icon nc-icon nc-bullet-list-67"></span>
                             <span class="sidebar-normal">Kategori Arsitektur</span>
                         </a>

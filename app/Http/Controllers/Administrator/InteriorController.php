@@ -6,9 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Libraries\System;
 use App\Models\Administrator\InteriorModel;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -38,11 +36,9 @@ class InteriorController extends Controller
                 'in.interior_video_link',
                 'in.interior_meta_keyword',
                 'in.interior_meta_deskripsi',
-                'us.user_nama',
                 'in.created_at',
                 'in.updated_at',
-            ])
-            ->join('users as us', 'in.interior_author', '=', 'us.id');
+            ]);
 
         return DataTables::of($DB)
             ->addColumn('foto_count', function ($row) {
@@ -70,7 +66,6 @@ class InteriorController extends Controller
             'interior_video_link' => $request->input('video_link'),
             'interior_meta_keyword' => strtolower($request->input('nama')),
             'interior_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
-            'interior_author' => Auth::id(),
             'created_at' => date('Y-m-d H:i:s')
         ];
 
@@ -115,7 +110,6 @@ class InteriorController extends Controller
             'interior_video_link' => $request->input('video_link'),
             'interior_meta_keyword' => strtolower($request->input('nama')),
             'interior_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
-            'interior_author' => Auth::id(),
             'updated_at' => date('Y-m-d H:i:s')
         ];
 
@@ -194,7 +188,7 @@ class InteriorController extends Controller
                 'uploads'
             );
 
-            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/foto/', '', $path);
         }
 
         // ==> Insert Data
@@ -233,7 +227,7 @@ class InteriorController extends Controller
                 'uploads'
             );
 
-            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/foto/', '', $path);
         }
 
         // ==> Insert Data

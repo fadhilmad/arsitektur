@@ -44,7 +44,6 @@
                                 <th>Nama Miscellaneouse</th>
                                 <th>Link Video</th>
                                 <th>Jumlah Foto</th>
-                                <th>Author</th>
                                 <th>Created At</th>
                                 <th class="disabled-sorting">Aksi</th>
                             </tr>
@@ -97,7 +96,7 @@
                                         <div class="form-group">
                                             <label for="video-link">Video Link</label>
                                             <input type="text" class="form-control" name="video_link" id="video-link"
-                                                placeholder="https://www.youtube.com/embed/FZOzH9EzZyA">
+                                                placeholder="Link URL">
                                             <small class="message-error text-danger" data-target="video_link_error"></small>
                                         </div>
                                     </div>

@@ -27,11 +27,6 @@ let table = $("#datatable").DataTable({
             data: "foto_count",
         },
         {
-            data: "user_nama",
-            name: "us.user_nama",
-            width: "150px",
-        },
-        {
             data: "created_at",
             name: "mi.created_at",
         },
