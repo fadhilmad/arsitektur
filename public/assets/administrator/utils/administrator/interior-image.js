@@ -1,6 +1,6 @@
 let table = $("#datatable").DataTable({
     ajax: {
-        url: baseUrl("/api/administrator/images/interior" + "-fetch"),
+        url: baseUrl("/api/administrator/interior-image-fetch/" + masterId),
         dataSrc: "data",
         type: "POST",
     },
@@ -15,7 +15,7 @@ let table = $("#datatable").DataTable({
     responsive: true,
     columns: [
         {
-            data: "interior_nama",
+            data: "interior_foto_nama",
         },
         {
             data: "created_at",
@@ -46,23 +46,22 @@ let table = $("#datatable").DataTable({
         },
     ],
     createdRow: function (row, data) {
-        // ==> Detail Button
-        $(".action-detail", row).click(function (e) {
-            e.preventDefault();
-            window.location.replace(
-                baseUrl("/administrator/images/projeck-interior")
-            );
-        });
-
         // ==> Edit Button
         $(".action-edit", row).click(function (e) {
             e.preventDefault();
 
             // ==> Form
             $('input[name="id"]').val(data.id);
-            $('input[name="nama"]').val(data.interior_nama);
-            $('input[name="video_link"]').val(data.interior_video_link);
-            $('textarea[name="deskripsi"]').val(data.interior_meta_deskripsi);
+            $('input[name="interior_id"]').val(masterId);
+            $('input[name="nama"]').val(data.interior_foto_nama);
+            $(".image-preview").attr(
+                "src",
+                data.interior_foto_img
+                    ? assetsUrl(
+                          "uploads/interior/foto/" + data.interior_foto_img
+                      )
+                    : assetsUrl("uploads/interior/no-image.png")
+            );
 
             $(".message-error").empty();
             $("#modal-form").modal("show");
@@ -85,7 +84,20 @@ let table = $("#datatable").DataTable({
                 cancelButtonText: "Batal",
             }).then((result) => {
                 if (result.value) {
-                    Swal.fire("Success", "Data Berhasil Dihapus", "success");
+                    $.LoadingOverlay("show");
+                    $.httpRequest({
+                        url: baseUrl(
+                            "/api/administrator/interior-image/" + data.id
+                        ),
+                        method: "DELETE",
+                        response: (res) => {
+                            $.LoadingOverlay("hide");
+                            if (res.statusCode == 200) {
+                                Swal.fire("Success", res.message, "success");
+                                table.ajax.reload();
+                            }
+                        },
+                    });
                 }
             });
         });
@@ -96,8 +108,8 @@ $(".action-add").click(function () {
     $("#form-data").formReset();
     $(".message-error").empty();
 
+    $('input[name="interior_id"]').val(masterId);
     $(".image-preview").attr("src", assetsUrl("uploads/interior/no-image.png"));
-
     $("#modal-form").modal("show");
 });
 
@@ -117,8 +129,12 @@ $(".card-upload-image").click(function () {
 });
 
 // ==> Form Submit
-$("#form-data").submit(function (e) {
-    e.preventDefault();
-    $("#modal-form").modal("hide");
-    Swal.fire("Success", "Data Berhasil Disimpan", "success");
+$("#form-data").formSubmit((response) => {
+    if (response.statusCode == 200) {
+        $("#form-data").formReset();
+        $("#modal-form").modal("hide");
+
+        Swal.fire("Success", response.message, "success");
+        table.ajax.reload();
+    }
 });

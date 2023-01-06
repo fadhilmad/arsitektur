@@ -18,3 +18,7 @@
 .dataTables_paginate .pagination {
     justify-content: end;
 }
+
+.row-action {
+    width: 120px;
+}

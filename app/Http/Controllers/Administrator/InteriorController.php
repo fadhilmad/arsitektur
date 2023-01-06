@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Libraries\System;
 use App\Models\Administrator\InteriorModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -13,7 +14,7 @@ use Yajra\DataTables\Facades\DataTables;
 
 class InteriorController extends Controller
 {
-    private $fileDirUpload = "interior";
+    private $fileDirUpload = "interior/foto";
     private $system;
 
     public function __construct()
@@ -26,7 +27,7 @@ class InteriorController extends Controller
         return view('administrator.interior.index');
     }
 
-    public function fetch(Request $request)
+    public function fetch()
     {
         $DB = DB::table('interior as in')
             ->select([
@@ -47,26 +48,39 @@ class InteriorController extends Controller
             ->addColumn('foto_count', function ($row) {
                 return InteriorModel::countFotoInterior($row->id);
             })
+            ->rawColumns(['interior_deskripsi'])
             ->toJson(JSON_PRETTY_PRINT);
     }
 
     public function store(Request $request)
     {
-        $validated = Validator::make($request->all(), []);
+        $validated = Validator::make($request->all(), [
+            'nama' => 'required|regex:/^[\pL\s\-]+$/u',
+            'video_link' => 'url',
+            'deskripsi' => 'required',
+            'thumbnail' => 'mimes:png,jpg,jpeg|max:512'
+        ]);
 
         if ($validated->fails()) return $this->badRequest($validated);
 
         // ==> Data Insert
-        $data = [];
+        $data = [
+            'interior_nama' => $request->input('nama'),
+            'interior_deskripsi' => $request->input('deskripsi'),
+            'interior_video_link' => $request->input('video_link'),
+            'interior_meta_keyword' => strtolower($request->input('nama')),
+            'interior_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
+            'interior_author' => Auth::id()
+        ];
 
         // ==> File Upload
-        if ($request->file('images') != null) {
-            $path = $request->file('images')->store(
+        if ($request->file('thumbnail') != null) {
+            $path = $request->file('thumbnail')->store(
                 $this->fileDirUpload,
                 'uploads'
             );
 
-            $data['user_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+            $data['interior_thumbnail'] = str_replace($this->fileDirUpload . '/', '', $path);
         }
 
         // ==> Insert Data
@@ -84,21 +98,33 @@ class InteriorController extends Controller
 
     public function update(Request $request, $id)
     {
-        $validated = Validator::make($request->all(), []);
+        $validated = Validator::make($request->all(), [
+            'nama' => 'required|regex:/^[\pL\s\-]+$/u',
+            'video_link' => 'url',
+            'deskripsi' => 'required',
+            'thumbnail' => 'mimes:png,jpg,jpeg|max:512'
+        ]);
 
         if ($validated->fails()) return $this->badRequest($validated);
 
         // ==> Data Insert
-        $data = [];
+        $data = [
+            'interior_nama' => $request->input('nama'),
+            'interior_deskripsi' => $request->input('deskripsi'),
+            'interior_video_link' => $request->input('video_link'),
+            'interior_meta_keyword' => strtolower($request->input('nama')),
+            'interior_meta_deskripsi' => htmlspecialchars(strip_tags($request->input('deskripsi'))),
+            'interior_author' => Auth::id()
+        ];
 
         // ==> File Upload
-        if ($request->file('images') != null) {
-            $path = $request->file('images')->store(
+        if ($request->file('thumbnail') != null) {
+            $path = $request->file('thumbnail')->store(
                 $this->fileDirUpload,
                 'uploads'
             );
 
-            $data['user_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+            $data['interior_thumbnail'] = str_replace($this->fileDirUpload . '/', '', $path);
         }
 
         // ==> Insert Data
@@ -129,15 +155,110 @@ class InteriorController extends Controller
         ]);
     }
 
-    public function image()
+    public function image($id)
     {
-        return view('administrator.interior.image');
+        return view('administrator.interior.image', ['master_id' => $id]);
     }
 
-    public function image_fetch(Request $request)
+    public function image_fetch($id)
     {
-        $DB = DB::table('interior_foto');
+        $DB = DB::table('interior_foto')
+            ->where('interior_id', $id);
+
         return DataTables::of($DB)
             ->toJson(JSON_PRETTY_PRINT);
+    }
+
+    public function image_store(Request $request)
+    {
+        $validated = Validator::make($request->all(), [
+            'nama' => 'required|regex:/^[a-z0-9 .\-]+$/i',
+            'images' => 'mimes:png,jpg,jpeg|max:5120'
+        ]);
+
+        if ($validated->fails()) return $this->badRequest($validated);
+
+        // ==> Data Insert
+        $data = [
+            'interior_id' => $request->input('interior_id'),
+            'interior_foto_nama' => $request->input('nama'),
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+        // ==> File Upload
+        if ($request->file('images') != null) {
+            $path = $request->file('images')->store(
+                $this->fileDirUpload,
+                'uploads'
+            );
+
+            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+        }
+
+        // ==> Insert Data
+        $i = InteriorModel::saveImage($data);
+        if (!$i) return $this->system->responseServer(500, [
+            'statusCode' => 500,
+            'message' => 'Terjadi kesalahan saat insert data'
+        ]);
+
+        return $this->system->responseServer(200, [
+            'statusCode' => 200,
+            'message' => 'Data telah berhasil disimpan !'
+        ]);
+    }
+
+    public function image_update(Request $request, $id)
+    {
+        $validated = Validator::make($request->all(), [
+            'nama' => 'required|regex:/^[a-z0-9 .\-]+$/i',
+            'images' => 'mimes:png,jpg,jpeg|max:5120'
+        ]);
+
+        if ($validated->fails()) return $this->badRequest($validated);
+
+        // ==> Data Insert
+        $data = [
+            'interior_id' => $request->input('interior_id'),
+            'interior_foto_nama' => $request->input('nama'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ];
+
+        // ==> File Upload
+        if ($request->file('images') != null) {
+            $path = $request->file('images')->store(
+                $this->fileDirUpload,
+                'uploads'
+            );
+
+            $data['interior_foto_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+        }
+
+        // ==> Insert Data
+        $i = InteriorModel::saveImage($data, $id);
+        if (!$i) return $this->system->responseServer(500, [
+            'statusCode' => 500,
+            'message' => 'Terjadi kesalahan saat update data'
+        ]);
+
+        return $this->system->responseServer(200, [
+            'statusCode' => 200,
+            'message' => 'Data telah berhasil disimpan !'
+        ]);
+    }
+
+    public function image_destroy($id)
+    {
+        $i = InteriorModel::deleteImage($id);
+
+        if (!$i) return $this->system->responseServer(500, [
+            'statusCode' => 500,
+            'message' => 'Terjadi kesalahan saat hapus data'
+        ]);
+
+        return $this->system->responseServer(200, [
+            'statusCode' => 200,
+            'message' => 'Data telah berhasil dihapus !'
+        ]);
     }
 }

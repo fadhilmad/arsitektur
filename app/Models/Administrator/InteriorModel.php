@@ -14,6 +14,7 @@ class InteriorModel extends Model
 
     protected $fillable = [
         'interior_nama',
+        'interior_thumbnail',
         'interior_deskripsi',
         'interior_video_link',
         'interior_meta_keyword',
@@ -28,5 +29,24 @@ class InteriorModel extends Model
         return DB::table('interior_foto')
             ->where('interior_id', $id)
             ->count();
+    }
+
+    public static function saveImage($data, $id = "")
+    {
+        if ($id) {
+            return DB::table('interior_foto')
+                ->where('id', $id)
+                ->update($data);
+        } else {
+            return DB::table('interior_foto')
+                ->insert($data);
+        }
+    }
+
+    public static function deleteImage($id)
+    {
+        return DB::table('interior_foto')
+            ->where('id', $id)
+            ->delete();
     }
 }

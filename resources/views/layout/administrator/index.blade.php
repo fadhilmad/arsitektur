@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url('assets/img/img-4-blt-rm.png')}}">
+    <link rel="icon" type="image/png" href="{{url('assets/img/img-4-blt-rm.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         DSATELI3R - Administrator
@@ -19,6 +19,7 @@
     <link href="{{ asset('assets/administrator/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/paper-dashboard.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/plugins/toastr.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/administrator/vendor/summernote/summernote.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/administrator/demo/demo.css') }}" rel="stylesheet" />
     @yield('css')
@@ -76,6 +77,7 @@
     <script src="{{ asset('/assets/administrator/js/plugins/loadingoverlay.min.js') }}"></script>
     <script src="{{ asset('/assets/administrator/js/plugins/toastr.min.js') }}"></script>
     <script src="{{ asset('/assets/administrator/js/plugins/fecth-api.min.js') }}"></script>
+    <script src="{{ asset('assets/administrator/vendor/summernote/summernote.min.js') }}"></script>
 
     <!-- Chart JS -->
     <script src="{{asset('/assets/administrator/js/plugins/chartjs.min.js')}}"></script>

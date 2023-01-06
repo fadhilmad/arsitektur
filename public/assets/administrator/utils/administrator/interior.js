@@ -71,7 +71,7 @@ let table = $("#datatable").DataTable({
         $(".action-detail", row).click(function (e) {
             e.preventDefault();
             window.location.replace(
-                baseUrl("/administrator/images/projeck-interior")
+                baseUrl("/administrator/projeck-interior-image/" + data.id)
             );
         });
 
@@ -83,7 +83,16 @@ let table = $("#datatable").DataTable({
             $('input[name="id"]').val(data.id);
             $('input[name="nama"]').val(data.interior_nama);
             $('input[name="video_link"]').val(data.interior_video_link);
-            $('textarea[name="deskripsi"]').val(data.interior_meta_deskripsi);
+            $('textarea[name="deskripsi"]').summernote(
+                "code",
+                data.interior_deskripsi
+            );
+            $(".image-preview").attr(
+                "src",
+                data.interior_thumbnail
+                    ? assetsUrl("uploads/interior/" + data.interior_thumbnail)
+                    : assetsUrl("uploads/interior/no-image.png")
+            );
 
             $(".message-error").empty();
             $("#modal-form").modal("show");
@@ -106,7 +115,18 @@ let table = $("#datatable").DataTable({
                 cancelButtonText: "Batal",
             }).then((result) => {
                 if (result.value) {
-                    Swal.fire("Success", "Data Berhasil Dihapus", "success");
+                    $.LoadingOverlay("show");
+                    $.httpRequest({
+                        url: baseUrl("/api/administrator/interior/" + data.id),
+                        method: "DELETE",
+                        response: (res) => {
+                            $.LoadingOverlay("hide");
+                            if (res.statusCode == 200) {
+                                Swal.fire("Success", res.message, "success");
+                                table.ajax.reload();
+                            }
+                        },
+                    });
                 }
             });
         });
@@ -118,7 +138,7 @@ $(".action-add").click(function () {
     $(".message-error").empty();
 
     $(".image-preview").attr("src", assetsUrl("uploads/interior/no-image.png"));
-
+    $('textarea[name="deskripsi"]').summernote("code", "");
     $("#modal-form").modal("show");
 });
 
@@ -138,8 +158,24 @@ $(".card-upload-image").click(function () {
 });
 
 // ==> Form Submit
-$("#form-data").submit(function (e) {
-    e.preventDefault();
-    $("#modal-form").modal("hide");
-    Swal.fire("Success", "Data Berhasil Disimpan", "success");
+$("#form-data").formSubmit((response) => {
+    if (response.statusCode == 200) {
+        $("#form-data").formReset();
+        $("#modal-form").modal("hide");
+        Swal.fire("Success", response.message, "success");
+        table.ajax.reload();
+    }
+});
+
+$('textarea[name="deskripsi"]').summernote({
+    height: 200,
+    toolbar: [
+        ["font", ["bold", "italic", "underline", "clear"]],
+        ["fontname", ["fontname"]],
+        ["fontsize", ["fontsize"]],
+        ["color", ["color"]],
+        ["para", ["ol", "ul", "paragraph"]],
+        ["insert", ["link"]],
+        ["view", ["undo", "redo", "fullscreen", "codeview", "help"]],
+    ],
 });
