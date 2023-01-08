@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Libraries\System;
 use App\Models\Administrator\UsersModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -164,6 +165,70 @@ class UsersController extends Controller
         return $this->system->responseServer(200, [
             'statusCode' => 200,
             'message' => 'Data telah berhasil dihapus !'
+        ]);
+    }
+
+    public function profile()
+    {
+        $dataUser = UsersModel::where('id', Auth::id())->first();
+        return view('administrator.profile.index', ['data' => $dataUser]);
+    }
+
+    public function profileSave(Request $request)
+    {
+        $validated = Validator::make($request->all(), [
+            'nama' => 'required|regex:/^[\pL\s\-]+$/u',
+            'email' => 'required|email',
+            'no_telp' => 'required|numeric',
+            'username' => 'required|alpha_num',
+            'jabatan' => 'required|regex:/^[\pL\s\-]+$/u',
+            'biodata' => 'required',
+            'foto_profile' => 'mimes:png,jpg,jpeg|max:512'
+        ]);
+
+        if ($validated->fails()) return $this->badRequest($validated);
+
+        // ==> Data Insert
+        $data = [
+            'username' => $request->input('username'),
+            'user_nama' => $request->input('nama'),
+            'user_telp' => $request->input('no_telp'),
+            'user_jabatan' => $request->input('jabatan'),
+            'user_email' => $request->input('email'),
+            'user_biodata' => $request->input('biodata'),
+            'user_fb' => $request->input('facebook'),
+            'user_tw' => $request->input('twitter'),
+            'user_ig' => $request->input('instagram'),
+            'user_ln' => $request->input('linkedin'),
+            'user_be' => $request->input('behance'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ];
+
+        // ==> File Upload
+        if ($request->file('foto_profile') != null) {
+            $path = $request->file('foto_profile')->store(
+                $this->fileDirUpload,
+                'uploads'
+            );
+
+            $data['user_img'] = str_replace($this->fileDirUpload . '/', '', $path);
+        }
+
+        // ==> Password
+        if ($request->input('password') != "") {
+            $data['password'] = Hash::make($request->input('password'));
+        }
+
+        // ==> Insert Data
+        $i = UsersModel::where('id', Auth::id())->update($data);
+        if (!$i) return $this->system->responseServer(500, [
+            'statusCode' => 500,
+            'message' => 'Terjadi kesalahan saat update data'
+        ]);
+
+        return $this->system->responseServer(200, [
+            'statusCode' => 200,
+            'message' => 'Data telah berhasil disimpan !'
         ]);
     }
 }

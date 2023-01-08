@@ -3,7 +3,7 @@
 @section('css')
     <style>
         .image-preview {
-            height: 96px;
+            height: 92px;
             object-fit: contain;
         }
 

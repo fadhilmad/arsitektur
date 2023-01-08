@@ -50,7 +50,7 @@ let table = $("#datatable").DataTable({
 
                 return div.outerHTML;
             },
-            width: "180px",
+            width: "90px",
         },
     ],
     createdRow: function (row, data) {
