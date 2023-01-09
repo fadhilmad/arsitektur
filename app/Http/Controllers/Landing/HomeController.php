@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Landing;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Home;
 
@@ -10,10 +12,9 @@ use App\Models\Home;
 class HomeController extends Controller
 {
     public function index()
-    {
+    {   
+        $our_team = DB::table('our_team')->get();
 
-        $data['data'] = Home::all();
-        
-    	return view('landing.home',$data);
+        return view('landing.home',['our_team' => $our_team]);
     }
 }

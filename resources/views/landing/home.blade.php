@@ -515,48 +515,29 @@
 			</div>
 		</div>
 		<div class="row justify-content-center">
+            @foreach ($our_team as $row)
 			<div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
 				<div class="h-100 person">
 
-					<img src="/template/property/untree.co-property/images/person_1-min.jpg" alt="Image"
+					<img src="{{$row->our_team_img}}" alt="Image"
 					class="img-fluid">
 
 					<div class="person-contents">
-						<h2 class="mb-0"><a href="#">MAS DEDDY</a></h2>
-						<span class="meta d-block mb-3">Founder</span>
-						<p>Discripsi Biogafi</p>
+						<h2 class="mb-0"><a href="#">{{$row->our_team_nama}}</a></h2>
+						<span class="meta d-block mb-3">{{$row->our_team_jabatan}}</span>
+						<p>{{$row->our_team_biodata}}</p>
 
 						<ul class="social list-unstyled list-inline dark-hover">
-							<li class="list-inline-item"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="list-inline-item"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="list-inline-item"><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li class="list-inline-item"><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li class="list-inline-item"><a href="#"><span class="icon-behance"></span></a></li>
+							<li class="list-inline-item"><a href="{{$row->our_team_tw}}"><span class="icon-twitter"></span></a></li>
+							<li class="list-inline-item"><a href="{{$row->our_team_fb}}"><span class="icon-facebook"></span></a></li>
+							<li class="list-inline-item"><a href="{{$row->our_team_ln}}"><span class="icon-linkedin"></span></a></li>
+							<li class="list-inline-item"><a href="{{$row->our_team_ig}}"><span class="icon-instagram"></span></a></li>
+                            <li class="list-inline-item"><a href="{{$row->our_team_be}}"><span class="icon-behance"></span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
-				<div class="h-100 person">
-
-					<img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image"
-					class="img-fluid">
-
-					<div class="person-contents">
-						<h2 class="mb-0"><a href="#">MAS THONI</a></h2>
-						<span class="meta d-block mb-3">Co-founder</span>
-						<p>Discripsi Biogafi</p>
-
-						<ul class="social list-unstyled list-inline dark-hover">
-							<li class="list-inline-item"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="list-inline-item"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="list-inline-item"><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li class="list-inline-item"><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li class="list-inline-item"><a href="#"><span class="icon-behance"></span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+            @endforeach
 		</div>
 	</div>
 </div>
