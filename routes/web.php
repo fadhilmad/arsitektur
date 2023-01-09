@@ -2,9 +2,15 @@
 
 use App\Http\Controllers\Administrator\ArchitectureController;
 use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\Administrator\Frontend\AboutUsController;
+use App\Http\Controllers\Administrator\Frontend\ContactUsController;
+use App\Http\Controllers\Administrator\Frontend\IdentitasWebController;
+use App\Http\Controllers\Administrator\Frontend\NavbarController;
+use App\Http\Controllers\Administrator\Frontend\OurteamController;
 use App\Http\Controllers\Administrator\InteriorController;
 use App\Http\Controllers\Administrator\MasterData\KategoriArchitectureController;
 use App\Http\Controllers\Administrator\MiscellaneouseController;
+use App\Http\Controllers\Administrator\Frontend\SlideShowController;
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UtilsController;
@@ -35,7 +41,12 @@ Route::get('/debug', [UtilsController::class, 'debug'])->name('debug');
 
 Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    // ==> Users
     Route::get('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('/profile', [UsersController::class, 'profile'])->name('users');
+
+    // ==> Data Master
     Route::get('/datamaster/kategori-architecture', [KategoriArchitectureController::class, 'index'])->name('kategori_arsitektur');
 
     // Interior
@@ -49,6 +60,14 @@ Route::prefix('/administrator')->middleware('auth')->group(function () {
     // Architecture
     Route::get('/projeck-architecture', [ArchitectureController::class, 'index'])->name('architecture');
     Route::get('/projeck-architecture-image/{id}', [ArchitectureController::class, 'image'])->name('image_architecture');
+
+    // Frontend
+    Route::get('/frontend/ourteam', [OurteamController::class, 'index'])->name('ourteam');
+    Route::get('/frontend/identitas-web', [IdentitasWebController::class, 'index'])->name('identitas');
+    Route::get('/frontend/about-us', [AboutUsController::class, 'index'])->name('about-us');
+    Route::get('/frontend/navbar', [NavbarController::class, 'index'])->name('navbar');
+    Route::get('/frontend/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+    Route::get('/frontend/slide-show', [SlideShowController::class, 'index'])->name('slide-show');
 });
 
 /*
@@ -58,6 +77,7 @@ Route::prefix('/administrator')->middleware('auth')->group(function () {
 Route::prefix('/api')->group(function () {
     Route::post('/auth', [LoginController::class, 'auth']);
     Route::get('/utils/kategori-architecture', [UtilsController::class, 'getKategoriArchitecture']);
+    Route::get('/utils/navbar-parent', [UtilsController::class, 'getNavbarParent']);
 });
 
 Route::prefix('/api/administrator')->middleware('auth')->group(function () {
@@ -108,6 +128,36 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
     Route::post('/datamaster/kategori-architecture', [KategoriArchitectureController::class, 'store']);
     Route::post('/datamaster/kategori-architecture/{id}', [KategoriArchitectureController::class, 'update']);
     Route::delete('/datamaster/kategori-architecture/{id}', [KategoriArchitectureController::class, 'destroy']);
+
+    // Ourteam
+    Route::post('/frontend/ourteam-fetch', [OurteamController::class, 'fetch']);
+    Route::post('/frontend/ourteam', [OurteamController::class, 'store']);
+    Route::post('/frontend/ourteam/{id}', [OurteamController::class, 'update']);
+    Route::delete('/frontend/ourteam/{id}', [OurteamController::class, 'destroy']);
+
+    // Identitas Website
+    Route::post('/frontend/identitas-web', [IdentitasWebController::class, 'store']);
+
+    // About Us
+    Route::post('/frontend/about-us', [AboutUsController::class, 'store']);
+
+    // Navbar
+    Route::post('/frontend/navbar-fetch', [NavbarController::class, 'fetch']);
+    Route::post('/frontend/navbar', [NavbarController::class, 'store']);
+    Route::post('/frontend/navbar/{id}', [NavbarController::class, 'update']);
+    Route::delete('/frontend/navbar/{id}', [NavbarController::class, 'destroy']);
+
+    // Contact Us
+    Route::post('/frontend/contact-us-fetch', [ContactUsController::class, 'fetch']);
+
+    // Slide Show
+    Route::post('/frontend/slide-show-fetch', [SlideShowController::class, 'fetch']);
+    Route::post('/frontend/slide-show', [SlideShowController::class, 'store']);
+    Route::post('/frontend/slide-show/{id}', [SlideShowController::class, 'update']);
+    Route::delete('/frontend/slide-show/{id}', [SlideShowController::class, 'destroy']);
+
+    // Profile
+    Route::post('/profile', [UsersController::class, 'profileSave']);
 });
 
 /*
@@ -125,7 +175,6 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('landing.contact.index');
 });
-
 
 Route::get('/detail_project', function () {
     return view('landing.detail_project');
@@ -170,11 +219,3 @@ Route::get('/detail_miscellaneouse', function () {
 Route::get('/detail_arsitekture', function () {
     return view('landing.detail_project.detail_arsitekture');
 });
-
-// Route::prefix('/administrator')->group(function () {
-//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-//     Route::get('/project', function () {
-//         return view('administrator.project.interios');
-//     });
-// });

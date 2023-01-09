@@ -1,6 +1,7 @@
 .off-canvas-sidebar .nav,
 .sidebar .nav {
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
 
 .card-header-btn {
@@ -21,4 +22,75 @@
 
 .row-action {
     width: 120px;
+}
+
+.off-canvas-sidebar .nav li > a + div .nav li > a,
+.sidebar .nav li > a + div .nav li > a {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 0.8571em;
+    margin-bottom: 5px;
+    color: #9a9a9a;
+}
+
+.modal-body {
+    padding: 20px 20px;
+}
+
+.form-control-plaintext:focus-visible {
+    outline: none;
+}
+
+.image-profile-nav {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #d7d7d7;
+    margin-top: 2px;
+}
+
+.dropdown-toggle.no-carret::after {
+    display: none;
+}
+
+.dropdown-menu-right.no-carret {
+    right: 38px;
+    left: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar
+        .sidebar-wrapper
+        div
+        li.active
+        > [data-toggle="collapse"]
+        + div
+        .nav
+        li:after,
+    .sidebar
+        .sidebar-wrapper
+        div
+        li.active
+        > a:not([data-toggle="collapse"]):after {
+        top: 0px !important;
+    }
+
+    .sidebar
+        .sidebar-wrapper
+        div
+        li.active
+        > [data-toggle="collapse"]
+        + div
+        .nav
+        li:before,
+    .sidebar
+        .sidebar-wrapper
+        div
+        li.active
+        > a:not([data-toggle="collapse"]):before {
+        top: 0px !important;
+    }
 }

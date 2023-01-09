@@ -3,7 +3,7 @@
 @section('css')
     <style>
         .image-preview {
-            height: 172px;
+            height: 165px;
             object-fit: contain;
         }
     </style>
@@ -61,7 +61,7 @@
                                 <div class="form-group">
                                     <label for="alamat">Foto Profile</label>
                                     <div class="card card-upload-image on-hover">
-                                        <div class="card-body">
+                                        <div class="card-body text-center">
                                             <img class="image-preview" src="{{ url('/uploads/foto-profile/no-image.png') }}"
                                                 alt="no-image.png">
                                         </div>
@@ -74,35 +74,35 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="user-nama">User Nama</label>
-                                            <input type="text" class="form-control" name="nama" id="user-nama">
+                                            <input type="text" class="form-control" name="nama" id="user-nama" placeholder="Nama">
                                             <small class="message-error text-danger" data-target="nama_error"></small>
                                         </div>
                                     </div>
                                     <div class="col-md-7">
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" class="form-control" name="email" id="email">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                                             <small class="message-error text-danger" data-target="email_error"></small>
                                         </div>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label for="no-telp">No Telp</label>
-                                            <input type="number" class="form-control" name="no_telp" id="no-telp">
+                                            <input type="number" class="form-control" name="no_telp" id="no-telp" placeholder="No Telp">
                                             <small class="message-error text-danger" data-target="no_telp_error"></small>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="username">Username</label>
-                                            <input type="text" class="form-control" name="username" id="username">
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                                             <small class="message-error text-danger" data-target="username_error"></small>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="password">Password</label>
-                                            <input type="password" class="form-control" name="password" id="password">
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                                             <small class="message-error text-danger" data-target="password_error"></small>
                                         </div>
                                     </div>
@@ -111,49 +111,49 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="facebook">Facebook</label>
-                                    <input type="text" class="form-control" name="facebook" id="facebook">
+                                    <input type="text" class="form-control" name="facebook" id="facebook" placeholder="@facebook">
                                     <small class="message-error text-danger" data-target="facebook_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="twitter">Twitter</label>
-                                    <input type="text" class="form-control" name="twitter" id="twitter">
+                                    <input type="text" class="form-control" name="twitter" id="twitter" placeholder="@twitter">
                                     <small class="message-error text-danger" data-target="twitter_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="instagram">Instagram</label>
-                                    <input type="text" class="form-control" name="instagram" id="instagram">
+                                    <input type="text" class="form-control" name="instagram" id="instagram" placeholder="@instagram">
                                     <small class="message-error text-danger" data-target="instagram_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="linkedin">LinkedIn</label>
-                                    <input type="text" class="form-control" name="linkedin" id="linkedin">
+                                    <input type="text" class="form-control" name="linkedin" id="linkedin" placeholder="@linkedin">
                                     <small class="message-error text-danger" data-target="linkedin_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="behance">Behance</label>
-                                    <input type="text" class="form-control" name="behance" id="behance">
+                                    <input type="text" class="form-control" name="behance" id="behance" placeholder="@behance">
                                     <small class="message-error text-danger" data-target="behance_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="jabatan">Jabatan</label>
-                                    <input type="text" class="form-control" name="jabatan" id="jabatan">
+                                    <input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Jabatan">
                                     <small class="message-error text-danger" data-target="jabatan_error"></small>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="biodata">Biodata</label>
-                                    <textarea class="form-control" name="biodata" id="biodata" rows="3"></textarea>
+                                    <textarea class="form-control" name="biodata" id="biodata" rows="3" placeholder="Biodata"></textarea>
                                     <small class="message-error text-danger" data-target="biodata_error"></small>
                                 </div>
                             </div>

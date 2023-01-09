@@ -2,6 +2,8 @@
 
 namespace App\Http\Libraries;
 
+use App\Models\Administrator\UsersModel;
+
 class System
 {
     public function responseServer($statusCode, $data = [])
@@ -17,5 +19,11 @@ class System
         */
 
         return response()->json($data, $statusCode, ['Content-type' => 'application/json'], JSON_PRETTY_PRINT);
+    }
+
+    public static function getImageProfile($id)
+    {
+        $dataUser = UsersModel::where('id', $id)->first();
+        return @$dataUser->user_img ?: 'no-image.png';
     }
 }

@@ -41,7 +41,7 @@ let table = $("#datatable").DataTable({
                 // ==> Button Foto
                 var btn = document.createElement("button");
                 btn.className = "btn btn-info btn-icon btn-sm action-detail";
-                btn.innerHTML = '<i class="fa fa-list mr-1"></i>';
+                btn.innerHTML = '<i class="fa fa-image mr-1"></i>';
                 div.append(btn);
 
                 // ==> Button Edit

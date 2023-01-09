@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-header card-header-btn d-flex justify-content-between">
                     <h4 class="card-title">
-                        <i class="nc-icon nc-ruler-pencil mr-1"></i> Foto Miscellaneouse
+                        <i class="nc-icon nc-image mr-1"></i> Foto Miscellaneouse
                     </h4>
                     <button class="btn btn-success action-add">
                         <span class="btn-label mr-1">
