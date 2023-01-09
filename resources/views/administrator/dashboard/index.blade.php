@@ -8,160 +8,152 @@
                     <div class="row">
                         <div class="col-5 col-md-4">
                             <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
+                                <i class="nc-icon nc-ruler-pencil text-primary"></i>
                             </div>
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Project interiors</p>
-                                <p class="card-title">100
-                                <p>
+                                <p class="card-category">Project Interior</p>
+                                <p class="card-title" id="interior">{{ $interior }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer ">
                     <hr>
+                    <br>
                     <div class="stats">
-                        <i class="fa fa-refresh"></i>
-                        Update Now
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-5 col-md-4">
-                            <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
-                            </div>
-                        </div>
-                        <div class="col-7 col-md-8">
-                            <div class="numbers">
-                                <p class="card-category">Project interiors</p>
-                                <p class="card-title">100
-                                <p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer ">
-                    <hr>
-                    <div class="stats">
-                        <i class="fa fa-refresh"></i>
-                        Update Now
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-5 col-md-4">
-                            <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
-                            </div>
-                        </div>
-                        <div class="col-7 col-md-8">
-                            <div class="numbers">
-                                <p class="card-category">Project interiors</p>
-                                <p class="card-title">100
-                                <p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer ">
-                    <hr>
-                    <div class="stats">
-                        <i class="fa fa-refresh"></i>
-                        Update Now
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-5 col-md-4">
-                            <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
-                            </div>
-                        </div>
-                        <div class="col-7 col-md-8">
-                            <div class="numbers">
-                                <p class="card-category">Project interiors</p>
-                                <p class="card-title">100
-                                <p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer ">
-                    <hr>
-                    <div class="stats">
-                        <i class="fa fa-refresh"></i>
-                        Update now
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-5 col-md-4">
-                            <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
-                            </div>
-                        </div>
-                        <div class="col-7 col-md-8">
-                            <div class="numbers">
-                                <p class="card-category">Project interiors</p>
-                                <p class="card-title">100
-                                <p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer ">
-                    <hr>
-                    <div class="stats">
-                        <i class="fa fa-refresh"></i>
-                        Update now
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <div class="card-body ">
                     <div class="row">
                         <div class="col-5 col-md-4">
                             <div class="icon-big text-center icon-warning">
-                                <i class="nc-icon nc-money-coins text-success"></i>
+                                <i class="nc-icon nc-ruler-pencil text-secondary"></i>
                             </div>
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Project interiors</p>
-                                <p class="card-title">100
-                                <p>
+                                <p class="card-category">Project Arsitektur</p>
+                                <p class="card-title" id="arsitektur">{{ $architecture }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer ">
                     <hr>
+                    <br>
                     <div class="stats">
-                        <i class="fa fa-refresh"></i>
-                        Update now
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-ruler-pencil text-danger"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Project Miscellaneouse</p>
+                                <p class="card-title" id="miscellaneouse">{{ $miscellaneouse }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <br>
+                    <div class="stats">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-ruler-pencil text-success"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Project Commercial</p>
+                                <p class="card-title" id="commercial">{{ $commercial }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <br>
+                    <div class="stats">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-ruler-pencil text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Project Residential</p>
+                                <p class="card-title" id="residential">{{ $residential }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <br>
+                    <div class="stats">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                                <i class="nc-icon nc-ruler-pencil text-info"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                                <p class="card-category">Project Retail</p>
+                                <p class="card-title" id="retail">{{ $retail }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <br>
+                    <div class="stats">
+
                     </div>
                 </div>
             </div>
@@ -173,14 +165,20 @@
             <div class="card card-chart">
                 <div class="col">
                     <div class="card-header d-flex justify-content-between">
-                        <h5 class="card-title">Project Per Tahun</h5>
-                        <select class="form-control" name="tahun" id="tahun">
-                            <option value="">-</option>
-                            <option value="">2022</option>
-                            <option value="">2023</option>
-                            <option value="">2024</option>
-                            <option value="">2025</option>
-                        </select>
+                        <h5 class="card-title"><i class="nc-icon nc-ruler-pencil mr-1"></i> Grafik Per Tahun</h5>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-previous"><i class="nc-icon nc-minimal-left"></i></button>
+                                </div>
+                                <input type="text" name="year" class="form-control form-control-input-custom text-center"
+                                    value="{{ date('Y') }}" readonly>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-next"><i
+                                            class="nc-icon nc-minimal-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -192,111 +190,5 @@
 @endsection
 
 @section('javascript')
-    <script>
-        $('#tahun').select2({
-            width: "150px"
-        });
-
-        // ==> Chart
-        ctx = document.getElementById('chartActivity').getContext("2d");
-
-        gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-        gradientStroke.addColorStop(0, '#80b6f4');
-        gradientStroke.addColorStop(1, 'white');
-
-        gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
-        gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-        gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
-
-        myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: [2021, 2022, 2023, 2024, 2025],
-                datasets: [{
-                        label: "Data",
-                        borderColor: '#fcc468',
-                        fill: true,
-                        backgroundColor: '#fcc468',
-                        hoverBorderColor: '#fcc468',
-                        borderWidth: 8,
-                        data: [100, 120, 80, 70, 100],
-                    },
-                    {
-                        label: "Data",
-                        borderColor: '#4cbdd7',
-                        fill: true,
-                        backgroundColor: '#4cbdd7',
-                        hoverBorderColor: '#4cbdd7',
-                        borderWidth: 8,
-                        data: [80, 140, 50, 75, 110],
-                    },
-                    {
-                        label: "Data",
-                        borderColor: '#6bd098',
-                        fill: true,
-                        backgroundColor: '#6bd098',
-                        hoverBorderColor: '#6bd098',
-                        borderWidth: 8,
-                        data: [80, 120, 60, 50, 120],
-                    }
-                ]
-            },
-            options: {
-                tooltips: {
-                    tooltipFillColor: "rgba(0,0,0,0.5)",
-                    tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-                    tooltipFontSize: 14,
-                    tooltipFontStyle: "normal",
-                    tooltipFontColor: "#fff",
-                    tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-                    tooltipTitleFontSize: 14,
-                    tooltipTitleFontStyle: "bold",
-                    tooltipTitleFontColor: "#fff",
-                    tooltipYPadding: 6,
-                    tooltipXPadding: 6,
-                    tooltipCaretSize: 8,
-                    tooltipCornerRadius: 6,
-                    tooltipXOffset: 10,
-                },
-                legend: {
-
-                    display: false
-                },
-                scales: {
-
-                    yAxes: [{
-                        ticks: {
-                            fontColor: "#9f9f9f",
-                            fontStyle: "bold",
-                            beginAtZero: true,
-                            maxTicksLimit: 5,
-                            padding: 20
-                        },
-                        gridLines: {
-                            zeroLineColor: "transparent",
-                            display: true,
-                            drawBorder: false,
-                            color: '#9f9f9f',
-                        }
-
-                    }],
-                    xAxes: [{
-                        barPercentage: 0.4,
-                        gridLines: {
-                            zeroLineColor: "white",
-                            display: false,
-
-                            drawBorder: false,
-                            color: 'transparent',
-                        },
-                        ticks: {
-                            padding: 20,
-                            fontColor: "#9f9f9f",
-                            fontStyle: "bold"
-                        }
-                    }]
-                }
-            }
-        });
-    </script>
+    <script src="{{ asset('/assets/administrator/utils/administrator/dashboard.js') }}"></script>
 @endsection

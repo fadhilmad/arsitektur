@@ -21,7 +21,7 @@
                 <div class="card-body pr-4 pl-4">
                     <form id="form-data" action="{{ url('/api/administrator/frontend/identitas-web') }}" method="post">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="image-file">Logo</label>
                                     <div class="card card-upload-image on-hover">
@@ -34,7 +34,7 @@
                                     <input class="d-none" type="file" name="logo" id="image-file">
                                 </div>
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-9">
                                 <div class="row">
                                     <div class="col-md-8">
                                         <div class="form-group">
