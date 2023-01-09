@@ -61,6 +61,18 @@ label {
     left: auto;
 }
 
+.form-control-input-custom {
+    height: 38px !important;
+    margin-top: 10px;
+    margin-left: -2px;
+    margin-right: -2px;
+    border-radius: 0px !important;
+}
+
+.form-control-input-custom[readonly] {
+    background-color: #ebebeb !important;
+}
+
 @media screen and (min-width: 992px) {
     .sidebar
         .sidebar-wrapper

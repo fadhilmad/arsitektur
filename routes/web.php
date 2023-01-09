@@ -41,7 +41,7 @@ Route::get('/debug', [UtilsController::class, 'debug'])->name('debug');
 
 Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    
+
     // ==> Users
     Route::get('/users', [UsersController::class, 'index'])->name('users');
     Route::get('/profile', [UsersController::class, 'profile'])->name('users');
@@ -158,6 +158,9 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
 
     // Profile
     Route::post('/profile', [UsersController::class, 'profileSave']);
+
+    // Dashboard
+    Route::post('/dashboard/data-chart', [DashboardController::class, 'getDataChart']);
 });
 
 /*
