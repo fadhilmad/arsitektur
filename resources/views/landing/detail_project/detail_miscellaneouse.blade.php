@@ -42,34 +42,104 @@
                    </div>
                 </div>
 
-				<input class="form-control form-control-sm mb-3" type="text" placeholder="Comment.." aria-label=".form-control-sm example">
+				<div class="card p-3 mb-2">
 
-				
-			</div>
-
-            <div class="col-lg-4">
-				<div class="card shadow-lg p-3 bg-body rounded mb-3">
-
-					<div class="img d-flex justify-content-center mb-4">
-						<div></div>
-						<a><img href="/" src="{{url('assets/img/img-5-blt.png')}}" class="rounded-2" style="widht:10px; height:35px" alt=""></a>
-					</div>
-					<form action="">
+					<div class="col">
 						<div class="mb-3">
 							<label for="exampleFormControlInput1" class="form-label">Name</label>
-							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name..">
 						</div>
 						<div class="mb-3">
-							<label for="exampleFormControlTextarea1" class="form-label">Coment</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+							<label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 						</div>
+
 						<div class="col d-flex justify-content-between">
 							<div></div>
 							<button type="button" class="btn btn-primary btn-sm">Send</button>
 						</div>
-					</form>
+					</div>
+				</div>
+
+				<div class="card border bg-transparent rounded-3" style="height: 400px; overflow: scroll;">
+
+					<div class="card-body" >
+						<div class="d-sm-flex mb-2">
+							<div class="card border rounded-3 p-3">
+								<div>
+									<div class="mb-3 d-sm-flex justify-content-sm-between align-items-center">
+										<div>
+											<h5 class="m-0">Louis Ferguson</h5>
+											<span class="me-3 small">June 18, 2021 at 11:55 am</span>
+										</div>
+									</div>
+									<h6><span class="text-body fw-success">Comment</span> How does an Angular application work? Far advanced settling say finished raillery. Offered chiefly farther Satisfied conveying a dependent contented he gentleman agreeable do be.</h6>
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="d-sm-flex mb-2">
+							<div class="card border rounded-3 p-3">
+								<div>
+									<div class="mb-3 d-sm-flex justify-content-sm-between align-items-center">
+										<div>
+											<h5 class="m-0">Louis Ferguson</h5>
+											<span class="me-3 small">June 18, 2021 at 11:55 am</span>
+										</div>
+									</div>
+									<h6><span class="text-body fw-success">Comment</span> How does an Angular application work? Far advanced settling say finished raillery. Offered chiefly farther Satisfied conveying a dependent contented he gentleman agreeable do be.</h6>
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="d-sm-flex">
+							<div class="card border rounded-3 p-3">
+								<div>
+									<div class="mb-3 d-sm-flex justify-content-sm-between align-items-center">
+										<div>
+											<h5 class="m-0">Louis Ferguson</h5>
+											<span class="me-3 small">June 18, 2021 at 11:55 am</span>
+										</div>
+									</div>
+									<!-- Content -->
+									<h6><span class="text-body fw-success">Comment</span> How does an Angular application work? Far advanced settling say finished raillery. Offered chiefly farther Satisfied conveying a dependent contented he gentleman agreeable do be.</h6>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+            <div class="col-lg-4">
+				<div class="card shadow-lg p-4 bg-body rounded mb-3">
+					<h4 class="mb-4">Other projects</h4>
+					<div class="col mb-3 d-flex justify-content-between">
+						<img class="rounded me-3" style="height: 100px; width: 170px" src="/template/property/untree.co-property/images/img_1.jpg" alt="">
+						<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
+					</div>
+
+					<div class="col mb-3 d-flex justify-content-between">
+						<img class="rounded me-3" style="height: 100px; width: 170px" src="/template/property/untree.co-property/images/img_1.jpg" alt="">
+						<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
+					</div>
+
+					<div class="col mb-3 d-flex justify-content-between">
+						<img class="rounded me-3" style="height: 100px; width: 170px" src="/template/property/untree.co-property/images/img_1.jpg" alt="">
+						<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
+					</div>
+
+					<div class="col mb-3 d-flex justify-content-between">
+						<img class="rounded me-3" style="height: 100px; width: 170px" src="/template/property/untree.co-property/images/img_1.jpg" alt="">
+						<h6 class="mb-0"><a href="#">Fundamentals of Business Analysis</a></h6>
+					</div>
+					
 				</div>
             </div>
+
+			
         </div>
     </div>
 </div>
