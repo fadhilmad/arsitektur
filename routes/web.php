@@ -3,6 +3,7 @@
 use App\Http\Controllers\Administrator\DashboardController;
 use App\Http\Controllers\Administrator\InteriorController;
 use App\Http\Controllers\Administrator\UsersController;
+use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing.home');
-});
+// Route::get('/', function () {
+//     return view('/landing/home', [HomeController::class, 'home']);
+// });
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 /*
 |  Route Administrator
@@ -66,6 +69,7 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
 /*
 | Route Landing
 */
+
 
 Route::get('/index', function () {
     return view('layout.login.index');

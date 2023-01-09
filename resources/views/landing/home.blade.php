@@ -519,6 +519,8 @@
 			</div>
 		</div>
 		<div class="row justify-content-center">
+            @foreach ($our_team as $row)
+                
 			<div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
 				<div class="h-100 person">
 
@@ -526,7 +528,7 @@
 					class="img-fluid">
 
 					<div class="person-contents">
-						<h2 class="mb-0"><a href="#">MAS DEDDY</a></h2>
+						<h2 class="mb-0"><a href="#">{{$row->our_team_nama}}</a></h2>
 						<span class="meta d-block mb-3">Founder</span>
 						<p>Discripsi Biogafi</p>
 
@@ -540,7 +542,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
+            @endforeach
+			{{-- <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0">
 				<div class="h-100 person">
 
 					<img src="/template/property/untree.co-property/images/person_2-min.jpg" alt="Image"
@@ -560,7 +563,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </div>
