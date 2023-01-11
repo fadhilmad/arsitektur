@@ -7,6 +7,8 @@ use App\Http\Controllers\Administrator\Frontend\ContactUsController;
 use App\Http\Controllers\Administrator\Frontend\IdentitasWebController;
 use App\Http\Controllers\Administrator\Frontend\NavbarController;
 use App\Http\Controllers\Administrator\Frontend\OurteamController;
+use App\Http\Controllers\Administrator\Frontend\ServiceController;
+use App\Http\Controllers\Administrator\Frontend\AboutProjectController;
 use App\Http\Controllers\Administrator\InteriorController;
 use App\Http\Controllers\Administrator\MasterData\KategoriArchitectureController;
 use App\Http\Controllers\Administrator\MiscellaneouseController;
@@ -71,6 +73,10 @@ Route::prefix('/administrator')->middleware('auth')->group(function () {
     Route::get('/frontend/navbar', [NavbarController::class, 'index'])->name('navbar');
     Route::get('/frontend/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
     Route::get('/frontend/slide-show', [SlideShowController::class, 'index'])->name('slide-show');
+    Route::get('/frontend/service', [ServiceController::class, 'index'])->name('service');
+    
+    Route::get('/frontend/about-project', [AboutProjectController::class, 'index'])->name('about-project');
+    Route::get('/frontend/about-project-item/{id}', [AboutProjectController::class, 'item'])->name('about-project-item');
 });
 
 /*
@@ -158,6 +164,24 @@ Route::prefix('/api/administrator')->middleware('auth')->group(function () {
     Route::post('/frontend/slide-show', [SlideShowController::class, 'store']);
     Route::post('/frontend/slide-show/{id}', [SlideShowController::class, 'update']);
     Route::delete('/frontend/slide-show/{id}', [SlideShowController::class, 'destroy']);
+
+    // Service
+    Route::post('/frontend/service-fetch', [ServiceController::class, 'fetch']);
+    Route::post('/frontend/service', [ServiceController::class, 'store']);
+    Route::post('/frontend/service/{id}', [ServiceController::class, 'update']);
+    Route::delete('/frontend/service/{id}', [ServiceController::class, 'destroy']);
+
+    // About Project
+    Route::post('/frontend/about-project-fetch', [AboutProjectController::class, 'fetch']);
+    Route::post('/frontend/about-project', [AboutProjectController::class, 'store']);
+    Route::post('/frontend/about-project/{id}', [AboutProjectController::class, 'update']);
+    Route::delete('/frontend/about-project/{id}', [AboutProjectController::class, 'destroy']);
+
+    // Item About Project
+    Route::post('/frontend/about-project-item-fetch/{id}', [AboutProjectController::class, 'itemFetch']);
+    Route::post('/frontend/about-project-item', [AboutProjectController::class, 'itemStore']);
+    Route::post('/frontend/about-project-item/{id}', [AboutProjectController::class, 'itemUpdate']);
+    Route::delete('/frontend/about-project-item/{id}', [AboutProjectController::class, 'itemDestroy']);
 
     // Profile
     Route::post('/profile', [UsersController::class, 'profileSave']);

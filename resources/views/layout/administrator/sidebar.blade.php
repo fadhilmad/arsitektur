@@ -51,6 +51,12 @@
                             <span class="sidebar-normal">About Us</span>
                         </a>
                     </li>
+                    <li class="{{ request()->segment(3) == 'about-project' ? 'active' : '' }}">
+                        <a href="{{ url('/administrator/frontend/about-project') }}">
+                            <span class="sidebar-mini-icon nc-icon nc-ruler-pencil"></span>
+                            <span class="sidebar-normal">About Project</span>
+                        </a>
+                    </li>
                     <li class="{{ request()->segment(3) == 'contact-us' ? 'active' : '' }}">
                         <a href="{{ url('/administrator/frontend/contact-us') }}">
                             <span class="sidebar-mini-icon nc-icon nc-send"></span>
@@ -79,6 +85,12 @@
                         <a href="{{ url('/administrator/frontend/ourteam') }}">
                             <span class="sidebar-mini-icon nc-icon nc-badge"></span>
                             <span class="sidebar-normal">Our Team</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->segment(3) == 'service' ? 'active' : '' }}">
+                        <a href="{{ url('/administrator/frontend/service') }}">
+                            <span class="sidebar-mini-icon nc-icon nc-app"></span>
+                            <span class="sidebar-normal">Service</span>
                         </a>
                     </li>
                 </ul>
